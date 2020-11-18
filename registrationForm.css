@@ -8,7 +8,7 @@ body {
     max-width: 300px; /* maksimum lebar formnya*/
     margin: 50px auto; /*  jarak dari header web ke formnya, auto langsung ketengah gitu */
     border-radius: 20px; /*bikin bordernya jadi rada rounded */
-    box-shadow: 35px 20px 40px #222222 /*ini buat shadownya */
+    box-shadow: 35px 25px 40px #222222 /*ini buat shadownya */
   }
   .h1{
       color: whitesmoke;
