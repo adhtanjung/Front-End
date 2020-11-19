@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="registrationForm.css">
+    <script defer src="registrationForm.js"></script>
+</head>
+
+<body>
+    <div class="form">
+        <div id="signup">
+            <center>
+                <h1 class='h1'>Sign Up Now!</h1>
+            </center>
+
+            <div class="head">
+                <div class="wrap">
+                    <label>
+                        Username
+                    </label>
+                    <input type="text" placeholder="Username" id="username">
+                </div>
+            </div>
+
+            <div class="mid">
+                <div class="wrap">
+                    <label>
+                        Email
+                    </label>
+                    <input type="email" placeholder="adhtanjung@gmail.com " id="email">
+                </div>
+            </div>
+
+            <div class="password">
+                <label>
+                    Password
+                </label>
+                <div class="wrap">
+                    <input type="password" placeholder="More than 8 characters" id="password">
+                </div>
+            </div>
+
+            <div class="confirmPassword">
+                <div class="wrap">
+                    <label>
+                        Confirm password
+                    </label>
+                    <input type="password" id="confirmPassword">
+                </div>
+            </div>
+            <button class="button" onclick="signUp()">SIGN UP</button>
+            <center>
+                <p id='output' font-size: 20px; margin-top: 20px;></p>
+
+
+                <p style="color: white;">Or login with:</p>
+
+
+                <a href="https://myaccount.google.com/" target="_blank"><img
+                        src="https://cdn4.iconfinder.com/data/icons/social-icon-4/842/google-2-512.png"
+                        alt="icon not found"></a>
+                <a href="https://www.facebook.com/" target="_blank"><img
+                        src="https://cdn4.iconfinder.com/data/icons/social-icon-4/842/facebook-512.png"
+                        alt="icon not found"></a>
+                <a href="https://twitter.com/" target="_blank"><img
+                        src="https://cdn4.iconfinder.com/data/icons/social-icon-4/842/twitter-512.png"
+                        alt="icon not found"></a>
+            </center>
+
+
+
+
+        </div>
+
+</body>
+
+</html>
