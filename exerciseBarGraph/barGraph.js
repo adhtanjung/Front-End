@@ -68,16 +68,18 @@ function showBar(arr) {
 }
 
 function sort() {
-	let arrPerc2nd = arrPerc;
-
+	let arrPerc2nd = [];
+	for (let i = 0; i < arrPerc.length; i++) {
+		arrPerc2nd.push(arrPerc[i]);
+	}
 	let arrSorted = arrPerc2nd.sort((a, b) => a - b);
 	showBar(arrSorted);
-	console.log(arrSorted);
+	// console.log(arrSorted);
 }
 function revert() {
-	let arrPerc3 = [20, 80, 30, 50, 60];
-	showBar(arrPerc3);
-	// showBar(arrPerc);
+	// let arrPerc3 = [20, 80, 30, 50, 60];
+	// showBar(arrPerc3);
+	showBar(arrPerc);
 	// console.log(arrPerc);
 }
 showBar(arrPerc);
