@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UberClone</title>
+    <link rel="stylesheet" href="uber.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="header-container">
+            <div class="header-left">
+                <div class="header-items logo">Uber</div>
+                <div class="header-items company" style="display: flex; flex-direction: row; margin-top: 6px;">Company
+                    <div class="btn-Logo">
+                        <svg class="svg-icon" width="18" height="18" viewBox="0 0 24 24" fill="none">
+                            <path d="M18 8v3.8l-6 4.6-6-4.6V8l6 4.6L18 8z" fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header-items">Safety</div>
+                <div class="header-items">Help</div>
+                <div class="header-items">COVID-19 resources</div>
+            </div>
+            <div class="header-right">
+                <div class="header-items ">
+                    <div class="btn-Logo">
+                        <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path
+                                d="M12 1C5.9 1 1 5.9 1 12s4.9 11 11 11 11-4.9 11-11S18.1 1 12 1zm8 11c0 .7-.1 1.4-.3 2-.6-1.5-1.6-3.1-3-4.7l1.8-1.8c1 1.3 1.5 2.8 1.5 4.5zM6.5 6.5c1.3 0 3.6.8 6 2.9l-3.2 3.2C7.1 9.8 6.5 7.5 6.5 6.5zm8.1 5c2.3 2.7 2.9 5 2.9 6-1.3 0-3.6-.8-6-2.9l3.1-3.1zm1.9-6.1l-1.9 1.9c-1.6-1.4-3.2-2.4-4.7-3 .7-.2 1.3-.3 2-.3 1.8 0 3.3.5 4.6 1.4zM4 12c0-.7.1-1.4.3-2 .6 1.5 1.6 3.1 3 4.7l-1.8 1.8C4.5 15.2 4 13.7 4 12zm3.5 6.6l1.9-1.9c1.6 1.4 3.2 2.4 4.7 3-.7.2-1.3.3-2 .3-1.8 0-3.3-.5-4.6-1.4z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>
+                </div>
+                <div class="header-items" style="display: flex;margin-top: 10px;">
+                    <div class="btn-Logo" style="margin-right: 10px;">
+                        <svg class="svg-icon" width="15" height="15" viewBox="0 0 14 14" fill="none"
+                            xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M1.66671 3C0.930328 3 0.333374 2.40305 0.333374 1.66667C0.333374 0.930286 0.930328 0.333333 1.66671 0.333333C2.40309 0.333333 3.00004 0.930287 3.00004 1.66667C3.00004 2.40305 2.40309 3 1.66671 3ZM7.00004 3C6.26366 3 5.66671 2.40305 5.66671 1.66667C5.66671 0.930287 6.26366 0.333333 7.00004 0.333333C7.73642 0.333333 8.33337 0.930287 8.33337 1.66667C8.33337 2.40305 7.73642 3 7.00004 3ZM12.3334 3C11.597 3 11 2.40305 11 1.66667C11 0.930287 11.597 0.333333 12.3334 0.333333C13.0698 0.333333 13.6667 0.930287 13.6667 1.66667C13.6667 2.40305 13.0698 3 12.3334 3ZM1.66671 8.33333C0.930328 8.33333 0.333374 7.73638 0.333374 7C0.333374 6.26362 0.930328 5.66667 1.66671 5.66667C2.40309 5.66667 3.00004 6.26362 3.00004 7C3.00004 7.73638 2.40309 8.33333 1.66671 8.33333ZM7.00004 8.33333C6.26366 8.33333 5.66671 7.73638 5.66671 7C5.66671 6.26362 6.26366 5.66667 7.00004 5.66667C7.73642 5.66667 8.33337 6.26362 8.33337 7C8.33337 7.73638 7.73642 8.33333 7.00004 8.33333ZM12.3334 8.33333C11.597 8.33333 11 7.73638 11 7C11 6.26362 11.597 5.66667 12.3334 5.66667C13.0698 5.66667 13.6667 6.26362 13.6667 7C13.6667 7.73638 13.0698 8.33333 12.3334 8.33333ZM0.333374 12.3333C0.333374 13.0697 0.930328 13.6667 1.66671 13.6667C2.40309 13.6667 3.00004 13.0697 3.00004 12.3333C3.00004 11.597 2.40309 11 1.66671 11C0.930328 11 0.333374 11.597 0.333374 12.3333ZM5.66671 12.3333C5.66671 13.0697 6.26366 13.6667 7.00004 13.6667C7.73642 13.6667 8.33337 13.0697 8.33337 12.3333C8.33337 11.597 7.73642 11 7.00004 11C6.26366 11 5.66671 11.597 5.66671 12.3333ZM11 12.3333C11 13.0697 11.597 13.6667 12.3334 13.6667C13.0698 13.6667 13.6667 13.0697 13.6667 12.3333C13.6667 11.597 13.0698 11 12.3334 11C11.597 11 11 11.597 11 12.3333Z"
+                                fill="white"></path>
+                        </svg>
+                    </div>Products
+                </div>
+                <div class="header-items" style="display: flex;">
+                    <div class="btn-Logo" style="margin-right: 10px;">
+                        <svg class="svg-icon" width="16" height="16" viewBox="0 0 24 24" fill="none">
+                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                d="M17.5 6.5c0 3-2.5 5.5-5.5 5.5S6.5 9.5 6.5 6.5 9 1 12 1s5.5 2.5 5.5 5.5zm-3 0C14.5 5.1 13.4 4 12 4S9.5 5.1 9.5 6.5 10.6 9 12 9s2.5-1.1 2.5-2.5zM3 20c0-3.3 2.7-6 6-6h6c3.3 0 6 2.7 6 6v3h-3v-3c0-1.7-1.4-3-3-3H9c-1.6 0-3 1.3-3 3v3H3v-3z"
+                                fill="currentColor"></path>
+                        </svg>
+                    </div>Log in
+                </div>
+                <div class="header-items signUp-btn">Sign Up</div>
+            </div>
+        </div>
+
+
+        <div class="container-inner">
+            <div class="left-part">
+                <div class="big-title">
+
+                    Help keep each other safe
+                </div>
+
+                <div class="big-title-fill">
+                    <p>
+
+                        The world is upside down. Everything has changed. We are actively monitoring the coronavirus
+                        (COVID‑19) situation and are taking steps to help keep those that rely on our platform safe.
+                    </p>
+                </div>
+                <div class="learn-more">
+                    <button class="learn-more-btn"><a href=""></a>Learn More</button>
+
+
+                </div>
+            </div>
+
+            <div class="righ-part">
+
+                <div class="right-part-img">
+                    <img src="https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,w_698,h_465/v1586184518/assets/ef/95d634-7cb9-4b27-8de0-79c9680c7077/original/City-4_5.jpg"
+                        alt="" class="right-part-img-property">
+                </div>
+
+
+
+            </div>
+
+        </div>
+        <div class="services-container">
+
+            <div class="services-container-background">
+                <div class="uber-services-container">
+                    <div class="uber-services">
+                        <div class="services-header" style="text-align: center; line-height: 30px;">
+                            <div class="services-logo"><img
+                                    src="https://www.uber-assets.com/image/upload/v1542256606/assets/7d/5a4852-3b2a-4466-96de-602dfb62dc1b/original/restaurant-outlined.svg"
+                                    role="presentation" aria-hidden="true">
+                                <span class="services-name">
+                                    Eat
+                                </span>
+                            </div>
+                            <div class="services-logo"><img
+                                    src="https://www.uber-assets.com/image/upload/v1542252540/assets/6d/87af17-3970-4d01-8936-1b0ba102ea6e/original/car-front-outlined.svg"
+                                    role="presentation" aria-hidden="true">
+                                <span class="services-name">
+                                    Ride
+                                </span>
+                            </div>
+                            <div class="services-logo"><img
+                                    src="https://www.uber-assets.com/image/upload/v1558389718/assets/8e/33c8c0-f7e9-467c-924b-c70232943a47/original/Earn-filled.svg"
+                                    role="presentation" aria-hidden="true">
+                                <span class="services-name">
+                                    Earn
+                                </span>
+                            </div>
+                            <div class="services-logo"><img
+                                    src="https://www.uber-assets.com/image/upload/v1542257500/assets/14/aa5c19-33cc-4556-a8e3-8228253af608/original/truck-outlined.svg"
+                                    role="presentation" aria-hidden="true">
+                                <span class="services-name">
+                                    Freight
+                                </span>
+                            </div>
+                            <div class="services-logo"><img
+                                    src="https://www.uber-assets.com/image/upload/v1542252354/assets/e3/24ab47-806e-493b-9df8-748763238cc8/original/briefcase-outlined.svg"
+                                    role="presentation" aria-hidden="true">
+                                <span class="services-name">
+                                    Business
+                                </span>
+                            </div>
+                            <div class="services-logo"><img
+                                    src="https://www.uber-assets.com/image/upload/v1542257396/assets/18/30d860-25cc-4113-b155-8ee863a3efa3/original/train-outlined.svg"
+                                    role="presentation" aria-hidden="true">
+                                <span class="services-name">
+                                    Transit
+                                </span>
+                            </div>
+                            <div class="services-logo"><img
+                                    src="https://www.uber-assets.com/image/upload/v1542252195/assets/69/e1d56d-4b83-4878-aab5-c37ea291e188/original/bike-outlined.svg"
+                                    role="presentation" aria-hidden="true">
+                                <span class="services-name">
+                                    Bike & scoot
+                                </span>
+                            </div>
+                            <div class="services-logo"><img
+                                    src="https://www.uber-assets.com/image/upload/v1542251780/assets/ae/deba86-2d9b-47fd-a7c3-9cd2184992a1/original/airplane-depart-outlined.svg"
+                                    role="presentation" aria-hidden="true">
+                                <span class="services-name">
+                                    Elevate
+                                </span>
+                            </div>
+                        </div>
+                        <div class="services-details">
+                            <div class="details-eat"
+                                style="display:flex; flex-direction: column; font-size: 52px; line-height: 64px; width: 100%; height: auto;">
+                                Discover delicious eats
+                                <div class="eat-message"
+                                    style="font-family: Arial, Helvetica, sans-serif; font-size: 16px;">
+                                    <p>Order delivery from restaurants you love.</p>
+
+                                </div>
+
+                                <div class="order-now">
+                                    <div class="order-now-btn">
+                                        <div class="order-text">Order Now</div>
+                                    </div>
+                                    <div class="order-url">
+                                        <a href="https://google.com" target="_blank"
+                                            style="color: black; text-decoration: none;height: auto; width: auto;"
+                                            class="url-img">
+                                            Own a
+                                            restaurant? Partner with Uber Eats
+
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+        <div class="cities-container">
+            <div class="cities-part1">
+                <div class="cities-part1-1">
+                    Setting 10,000+ cities in motion
+                    <div class="cities-url">
+
+                        <a href="https://google.com" class="cities-part1-2">View all cities</a>
+
+                    </div>
+                </div>
+
+
+            </div>
+
+
+        </div>
+
+    </div>
+</body>
+
+</html>
