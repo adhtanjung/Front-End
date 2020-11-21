@@ -393,7 +393,7 @@ body{
 .safety-features-container{
     display: flex;
     height: auto;
-    width: auto;
+    width: 100%;
     background-color: white;
     margin: 0px auto;
 }
@@ -409,9 +409,12 @@ body{
 .safety-features-inner{
     display: flex;
     flex-direction: row;
+    margin: 0px auto;
     max-width: 1280px;
+    width: 1280px;
     height: 500px;
-    padding: 64px 116px 64px 116px;
+    /* padding: 64px 116px 64px 116px; */
+    padding-left: 116px;
 
 
 }
@@ -423,11 +426,9 @@ body{
     line-height: 36px;
 }
 .safety-features-right{
-    width:60%;
+    width:auto;
     height: auto;
-    position: relative;
-    padding-right: 90px;
-    padding-left: 50px;
+    object-fit: cover;
 }
 
 .cg-url{
