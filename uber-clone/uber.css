@@ -1,493 +1,448 @@
-@font-face{
-    font-family: 'UberFont';
-    src: url('./uber-move-2-cufonfonts/UberMoveMedium.otf');
+@font-face {
+	font-family: "UberFont";
+	src: url("./uber-move-2-cufonfonts/UberMoveMedium.otf");
 }
-.main-container{
-
-    max-width: 1519.2;
-    width: 1519.2px;
-    max-height: fit-content;
-    
-
-} 
-body{
-    
-    margin: 0;
-    
-    font-family: 'UberFont', sans-serif;
-
+.main-container {
+	max-width: 1519.2;
+	width: 1519.2px;
+	max-height: fit-content;
 }
-.header-container{
-    display: flex;
-    justify-content: space-between;
-    background-color: black;
-    color: white;
-    padding: 12px;
-    align-items: baseline;
-    width: auto;
-    
-
+body {
+	margin: 0;
+	font-family: "UberFont", sans-serif;
 }
-.header-right{
-    display: flex;
-    align-items: baseline;
-    padding-right: 80px;
-   
-    
-    
+.header-container {
+	display: flex;
+	justify-content: space-between;
+	background-color: black;
+	color: white;
+	padding: 12px;
+	align-items: baseline;
+	width: auto;
 }
-.header-left{
-    display: flex;
-    align-items: baseline;
-    padding-left: 100px;
-    
+.header-right {
+	display: flex;
+	align-items: baseline;
+	padding-right: 80px;
 }
-.header-items{
-    margin: 0 10px;
-    padding: 5px 12px;
-    border-radius: 30px;
-    font-size: 14px;
-    font-weight: 500;
-    
+.header-left {
+	display: flex;
+	align-items: baseline;
+	padding-left: 100px;
 }
-.header-items:hover{
-    background-color:rgb(51, 51, 51);
+.header-items {
+	margin: 0 10px;
+	padding: 5px 12px;
+	border-radius: 30px;
+	font-size: 14px;
+	font-weight: 500;
 }
-.logo{
-    font-size: 22px;
-    font-weight: normal;
-    
+.header-items:hover {
+	background-color: rgb(51, 51, 51);
 }
-.company{
-    margin: auto;
+.logo {
+	font-size: 22px;
+	font-weight: normal;
 }
-.signUp-btn{
-    padding-top: 10px;
-    padding-bottom: 10px;
-    border-radius: 30px;
-    background-color: white;
-    color: black;
+.company {
+	margin: auto;
 }
-.btn-Logo{
-    display: flex;
-    align-self: baseline;
-    margin:auto
- 
+.signUp-btn {
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 30px;
+	background-color: white;
+	color: black;
 }
-.container-inner{
-    display: flex;
-    background-color: black;
-    color: white;
-    padding: 80px 0 0 180px;
-    width: auto;
-    height: 500px;
-    
-
-    
+.btn-Logo {
+	display: flex;
+	align-self: baseline;
+	margin: auto;
 }
-.left-part{
-    width: 459px;
-    height: 336px;
+.container-inner {
+	display: flex;
+	background-color: black;
+	color: white;
+	padding: 80px 0 0 180px;
+	width: auto;
+	height: 500px;
 }
-.big-title{
-    width: 459px;
-    height: 128px;
-    font-size: 52px;
-    font-weight: 500;
-    padding-bottom: 30px;
+.left-part {
+	width: 459px;
+	height: 336px;
 }
-.big-title-fill{
-    height: 96px;
-    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: 0px;
-    
-
+.big-title {
+	width: 459px;
+	height: 128px;
+	font-size: 52px;
+	font-weight: 500;
+	padding-bottom: 30px;
 }
-.learn-more{
-    height: 60px;
-
+.big-title-fill {
+	height: 96px;
+	font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+	font-size: 16px;
+	line-height: 24px;
+	letter-spacing: 0px;
+}
+.learn-more {
+	height: 60px;
 }
 
-.learn-more-btn{
-    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    
-    border: 0;
-    outline: none;
-    background-color: #ededf0;
+.learn-more-btn {
+	font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
 
-    padding: 13px;
-    width: 130px;
-    font-size: 16px;
-    font-weight: 500;
-}
-.learn-more-btn:hover{
-    background-color:#c5c5c5 ;
-    transition: 250ms;
-    
-}
+	border: 0;
+	outline: none;
+	background-color: #ededf0;
 
-.right-part{
-    width: 558px;
-    height: 372px;
+	padding: 13px;
+	width: 130px;
+	font-size: 16px;
+	font-weight: 500;
 }
-.right-part-img{
-    padding:0 0 0 100px
-}
-.right-part-img-property{
-    width: 80%;
-    height: 80%;
-    
-}
-.services-container{
-    
-    display: flex;
-    width: 100%;
-    margin: 0 auto;
-    position: relative;
-    height: 900px;
-    min-height: 760px;
-    width: 100%;
-    
+.learn-more-btn:hover {
+	background-color: #c5c5c5;
+	transition: 250ms;
+	cursor: pointer;
 }
 
-.services-container-background{
-    display: flex;
-    width: 100%;
-    height: 100%;
-    background-color: white;
-    position: absolute;
-    background-image: url(https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,g_center,w_1899,h_1068/v1584996282/assets/0b/df0e6a-83a1-4921-88da-a2568701de01/original/eats-hero-desktop-5.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    margin: 0px auto;
-   
+.right-part {
+	width: 558px;
+	height: 372px;
 }
-.uber-services-container{
-    max-width: 1280; 
-   justify-self: center;
-   padding-left: 116px;
-
+.right-part-img {
+	padding: 0 0 0 100px;
 }
-.uber-services{
-    padding: 64px;
+.right-part-img-property {
+	width: 80%;
+	height: 80%;
+}
+.services-container {
+	display: flex;
+	width: 100%;
+	margin: 0 auto;
+	position: relative;
+	height: 900px;
+	min-height: 760px;
+	width: 100%;
 }
 
-.services-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 50px;
-    padding-right: 50px;
-    width: 1100px;
-    height: 120px;
-    background-color: white;
-    padding-top: 13px;
+.services-container-background {
+	display: flex;
+	width: 100%;
+	height: 100%;
+	background-color: white;
+	position: absolute;
+	background-image: url(https://www.uber-assets.com/image/upload/f_auto,q_auto:eco,c_fill,g_center,w_1899,h_1068/v1584996282/assets/0b/df0e6a-83a1-4921-88da-a2568701de01/original/eats-hero-desktop-5.jpg);
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	margin: 0px auto;
 }
-.services-logo{
-
-   display: flex;
-   flex-direction: column;
-    max-width: 100px;
-    max-height: 60px;
-    font-weight: normal;
-    font-size: 14px;
-    
+.uber-services-container {
+	max-width: 1280;
+	justify-self: center;
+	padding-left: 116px;
 }
-.services-name{
-    margin-top: 8px;
-    
+.uber-services {
+	padding: 64px;
 }
 
-.services-details{
-    background-color: white;
-    width: 40%;
-    height: auto ;
-    border-top: solid rgb(226, 226, 226) thin ;
-    padding: 48px;
-
-
+.services-header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 50px;
+	padding-right: 50px;
+	width: 1100px;
+	height: 120px;
+	background-color: white;
+	padding-top: 13px;
+}
+.services-logo {
+	display: flex;
+	flex-direction: column;
+	max-width: 100px;
+	max-height: 60px;
+	font-weight: normal;
+	font-size: 14px;
+}
+.services-name {
+	margin-top: 8px;
 }
 
-
-.order-now{
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    width: 100%;
-    height: 70px;
-
+.services-details {
+	background-color: white;
+	width: 40%;
+	height: auto;
+	border-top: solid rgb(226, 226, 226) thin;
+	padding: 48px;
 }
 
-.order-now-btn{
-    background-color: black;
-    
-    width: 25%;
-    height: 70%;
-  
+.order-now {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-end;
+	width: 100%;
+	height: 70px;
 }
 
-.order-text{
-    display: flex;
-    align-items: center;
-    color: white;
-    font-size: 16px;
-    width: auto;
-    height: 100%;
-    padding-left: 20px;
-}
-.order-url{
-    height: 70%;
-    margin-left: 24px;
-    font-family: Arial, Helvetica, sans-serif; font-size: 16px; 
-    line-height: 5px;
-    
-    
-   
+.order-now-btn {
+	background-color: black;
+	width: 25%;
+	height: 70%;
 }
 
-
-.url-img{
-    line-height: 50px;
-    background-image: linear-gradient( transparent calc(100% - 1px), #000000 1px ), linear-gradient( transparent calc(100% - 1px), #CBCBCB 1px );
-    background-repeat: no-repeat;
-    color: rgb(0, 0, 0);
-    background-size: 0% 6px, 100% 6px;
-    padding-bottom: 6px;
-    width: auto;
-    height: auto;
-    background-position: 0px bottom, 0px bottom;
-  
-   
+.order-text {
+	display: flex;
+	align-items: center;
+	color: white;
+	font-size: 16px;
+	width: auto;
+	height: 100%;
+	padding-left: 20px;
+	cursor: pointer;
 }
-.url-img:hover{
-    transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
-    background-size: 100% 6px, 100% 6px;
+.order-text:hover {
+	color: rgb(201, 201, 201);
 }
-
-.cities-container{
-    display: flex;
-    margin: 0px auto;
-    width: auto;
-    height: 700px;
-    background-image: url(./Modalities_banner_home.jpg);
-    position: relative;
-    background-position: center;
-    background-size: cover;
-
-    
-} 
-
-.cities-part1{
-    align-self: flex-start;
-    
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-    max-width: 1280px;
-
+.order-url {
+	height: 70%;
+	margin-left: 24px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	line-height: 5px;
 }
 
-.cities-part1-1{
-    padding-left: 65px;
-    padding-top: 65px;
-    
-    height: 500px;
-    width: 30%;
-    font-size: 36px;
+.url-img {
+	line-height: 50px;
+	background-image: linear-gradient(transparent calc(100% - 1px), #000000 1px),
+		linear-gradient(transparent calc(100% - 1px), #cbcbcb 1px);
+	background-repeat: no-repeat;
+	color: rgb(0, 0, 0);
+	background-size: 0% 6px, 100% 6px;
+	padding-bottom: 6px;
+	width: auto;
+	height: auto;
+	background-position: 0px bottom, 0px bottom;
+}
+.url-img:hover {
+	transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	background-size: 100% 6px, 100% 6px;
 }
 
-.animated-url{
-    padding-top: 30px;
-   
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    text-decoration: none;
-    background-image: linear-gradient( transparent calc(100% - 1px), #000000 1px ), linear-gradient( transparent calc(100% - 1px), #CBCBCB 1px );
-    background-repeat: no-repeat;
-    color: rgb(0, 0, 0);
-    background-size: 0% 6px, 100% 6px;
-    padding-bottom:5px;
-    width: auto;
-    height: auto;
-    background-position: 0px bottom, 0px bottom;
-   
-}
-.animated-url:hover{
-    transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
-    background-size: 100% 6px, 100% 6px;
+.cities-container {
+	display: flex;
+	margin: 0px auto;
+	width: auto;
+	height: 700px;
+	background-image: url(./Modalities_banner_home.jpg);
+	position: relative;
+	background-position: center;
+	background-size: cover;
 }
 
-.parent-container{
-    display: flex;
-    margin: 0px auto;
-    width: auto;
-    height: auto;
-}
-.child-container{
-    max-width: 1280px;
+.cities-part1 {
+	align-self: flex-start;
 
-    width: 100%;
-    margin-right: auto;
-    margin-left: auto;
-    
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	max-width: 1280px;
 }
 
-.business-inner{
-    width: auto;
-    height: auto;
-    padding:64px;
-    background-color:transparent;
-    color: black
+.cities-part1-1 {
+	padding-left: 65px;
+	padding-top: 65px;
+
+	height: 500px;
+	width: 30%;
+	font-size: 36px;
 }
 
-.business-title{
-    font-size: 36px;
+.animated-url {
+	padding-top: 30px;
+
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	background-image: linear-gradient(transparent calc(100% - 1px), #000000 1px),
+		linear-gradient(transparent calc(100% - 1px), #cbcbcb 1px);
+	background-repeat: no-repeat;
+	color: rgb(0, 0, 0);
+	background-size: 0% 6px, 100% 6px;
+	padding-bottom: 5px;
+	width: auto;
+	height: auto;
+	background-position: 0px bottom, 0px bottom;
+}
+.animated-url:hover {
+	transition: all 500ms cubic-bezier(0.23, 1, 0.32, 1) 0s;
+	background-size: 100% 6px, 100% 6px;
 }
 
-.business-title-paragraph{
-    padding-top: 20px;
+.parent-container {
+	display: flex;
+	margin: 0px auto;
+	width: auto;
+	height: auto;
+}
+.child-container {
+	max-width: 1280px;
 
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    color: rgb(73, 73, 73);
-}
-
-.inner-container{
-    display: flex;
-    flex-direction: row;
-    max-width: 1280px;
-    height: auto;
-    padding:64px
-
-    
-}
-.business-images{
-    width: 100%;
-    height: 240px;
-    
-    
-}
-.images{
-    padding-right: 30px;
-}
-.images-text-title{
-   font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    font-size: 18px;
-    font-weight: 500;
-}
-.images-text{
-    width: 354px;
-    height: auto;
-    object-fit: cover;
-    font-weight: lighter;
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    word-spacing: 2px;
-    color: rgb(73, 73, 73);
-    line-height: 24px;
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
 }
 
-.safety-features-container{
-    display: flex;
-    height: auto;
-    width: 100%;
-    background-color: white;
-    margin: 0px auto;
+.business-inner {
+	width: auto;
+	height: auto;
+	padding: 64px;
+	background-color: transparent;
+	color: black;
 }
 
-.safety-features-inner-container{
-    background-repeat: no-repeat;
-    background-size: cover;
-    max-width: 1280px ;
-    max-height: 900px;
-    margin: 64px;
-    
-}
-.safety-features-inner{
-    display: flex;
-    flex-direction: row;
-    margin: 0px auto;
-    max-width: 1280px;
-    width: 1280px;
-    height: 500px;
-    /* padding: 64px 116px 64px 116px; */
-    padding-left: 116px;
-
-
-}
-.safety-features-left{
-    width: 40%;
-    font-size: 36px;
-    height: auto;
-    margin-right: 100px;
-    line-height: 36px;
-}
-.safety-features-right{
-    width:auto;
-    height: auto;
-    object-fit: cover;
+.business-title {
+	font-size: 36px;
 }
 
-.cg-url{
-    width: auto;
-    clear:both;
-    float:left;
-    
-}
-.animated-arrow{
-    display: flex;
-    justify-content: flex-end;
-    
-}
-.top-right-clickable{
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 16px;
-    text-decoration: none; 
-    color: white;
-}
-.top-right-clickable:hover{
-    color: rgb(167, 167, 167);
-}
-.bottom-bottom-container{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: fit-content;
-    justify-content: space-between;
-}
-.bottom-bottom-inner{
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    height: fit-content;
-    justify-content: space-between;
-    font-size: 18px;
+.business-title-paragraph {
+	padding-top: 20px;
 
-}
-.clickable-link-white{
-    font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial, sans-serif;
-    color: white;
-    font-size: 14px;
-    text-decoration: none;
-    font-weight: lighter;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	color: rgb(73, 73, 73);
 }
 
-.clickable-link-white:hover{
-    color: rgb(167, 167, 167);
+.inner-container {
+	display: flex;
+	flex-direction: row;
+	max-width: 1280px;
+	height: auto;
+	padding: 64px;
+}
+.business-images {
+	width: 100%;
+	height: 240px;
+}
+.images {
+	padding-right: 30px;
+}
+.images-text-title {
+	font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+	font-size: 18px;
+	font-weight: 500;
+}
+.images-text {
+	width: 354px;
+	height: auto;
+	object-fit: cover;
+	font-weight: lighter;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	word-spacing: 2px;
+	color: rgb(73, 73, 73);
+	line-height: 24px;
 }
 
-.grayed-link{
-    text-decoration: none;
-    color: rgb(161, 161, 161);
-    font-size: 12px;
-    margin-right: 30px;
+.safety-features-container {
+	display: flex;
+	height: auto;
+	width: 100%;
+	background-color: white;
+	margin: 0px auto;
 }
 
-.grayed-link:hover{
-    color: rgb(97, 97, 97);
+.safety-features-inner-container {
+	background-repeat: no-repeat;
+	background-size: cover;
+	max-width: 1280px;
+	max-height: 900px;
+	margin: 64px;
+}
+.safety-features-inner {
+	display: flex;
+	flex-direction: row;
+	margin: 0px auto;
+	max-width: 1280px;
+	width: 1280px;
+	height: 500px;
+	/* padding: 64px 116px 64px 116px; */
+	padding-left: 116px;
+}
+.safety-features-left {
+	width: 40%;
+	font-size: 36px;
+	height: auto;
+	margin-right: 100px;
+	line-height: 36px;
+}
+.safety-features-right {
+	width: auto;
+	height: auto;
+	object-fit: cover;
+}
+
+.cg-url {
+	width: auto;
+	clear: both;
+	float: left;
+}
+.animated-arrow {
+	display: flex;
+	justify-content: flex-end;
+}
+.top-right-clickable {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-decoration: none;
+	color: white;
+}
+.top-right-clickable:hover {
+	color: rgb(167, 167, 167);
+}
+.bottom-bottom-container {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: fit-content;
+	justify-content: space-between;
+}
+.bottom-bottom-inner {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	height: fit-content;
+	justify-content: space-between;
+	font-size: 18px;
+}
+.clickable-link-white {
+	font-family: UberMoveText, system-ui, "Helvetica Neue", Helvetica, Arial,
+		sans-serif;
+	color: white;
+	font-size: 14px;
+	text-decoration: none;
+	font-weight: lighter;
+}
+
+.clickable-link-white:hover {
+	color: rgb(167, 167, 167);
+}
+
+.grayed-link {
+	text-decoration: none;
+	color: rgb(161, 161, 161);
+	font-size: 12px;
+	margin-right: 30px;
+}
+
+.grayed-link:hover {
+	color: rgb(97, 97, 97);
 }
 /* .cities-container-img{
     background-image: url(./Modalities_banner_home.jpg);
