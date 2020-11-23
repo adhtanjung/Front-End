@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+        integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+
+    <title>Code Academy LandingPage</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+        }
+
+        a {
+            color: black;
+        }
+
+        a:hover {
+            color: royalblue;
+        }
+
+        button {
+            box-shadow: none;
+        }
+
+        button:hover {
+            box-shadow: 0 3px 10px 1px #494949;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white container-fluid shadow" style="position: fixed;">
+        <a class=" navbar-brand" href="#"><svg height="27" viewBox="0 0 285 60" xmlns="http://www.w3.org/2000/svg">
+                <title>Codecademy Logo</title>
+                <g fill="currentColor" fill-rule="evenodd" style="--darkreader-inline-fill:currentColor;"
+                    data-darkreader-inline-fill="">
+                    <path
+                        d="M11.778 41.177C11.24 39.624 11 37.652 11 35.024c0-2.63.24-4.6.778-6.154C13.213 24.45 16.98 22 21.945 22c3.708 0 6.58 1.494 8.553 3.883a.49.49 0 0 1-.06.717l-3.23 2.868c-.24.18-.538.18-.717-.12-1.255-1.374-2.51-2.15-4.544-2.15-2.212 0-3.887 1.075-4.605 3.226-.36 1.254-.48 2.688-.48 4.6 0 1.91.12 3.405.54 4.66.72 2.09 2.393 3.226 4.606 3.226 2.033 0 3.35-.777 4.546-2.15.18-.24.48-.24.718-.06l3.23 2.867c.24.18.18.478.06.717-1.974 2.33-4.845 3.823-8.553 3.823-4.964-.06-8.792-2.45-10.227-6.93m110.998 0c-.538-1.553-.778-3.525-.778-6.153 0-2.63.24-4.6.778-6.154 1.435-4.42 5.203-6.87 10.167-6.87 3.708 0 6.64 1.494 8.553 3.883a.49.49 0 0 1-.06.717l-3.23 2.868c-.24.18-.538.18-.717-.12-1.255-1.374-2.51-2.15-4.544-2.15-2.212 0-3.887 1.075-4.605 3.226-.417 1.254-.54 2.688-.54 4.6 0 1.91.123 3.405.54 4.66.72 2.09 2.394 3.226 4.606 3.226 2.033 0 3.35-.777 4.546-2.15.18-.24.48-.24.718-.06l3.23 2.867c.24.18.18.478.06.717-1.974 2.33-4.845 3.823-8.553 3.823-4.964-.06-8.732-2.45-10.167-6.93m130.14 6.273c-.298 0-.537-.18-.537-.538V32.574c0-3.226-1.615-5.436-4.665-5.436-2.99 0-4.725 2.21-4.725 5.436v14.338c0 .3-.18.538-.538.538h-4.725c-.3 0-.538-.18-.538-.538V32.574c0-3.226-1.615-5.436-4.666-5.436-2.99 0-4.725 2.21-4.725 5.436v14.338c0 .3-.177.538-.536.538h-4.725c-.3 0-.54-.18-.54-.538V23.075c0-.298.18-.537.54-.537h4.724c.3 0 .538.18.538.537v1.793h.06c1.078-1.553 3.23-2.868 6.52-2.868 2.93 0 5.264 1.195 6.76 3.286h.06c1.912-2.09 4.365-3.286 7.893-3.286 5.742 0 8.972 3.943 8.972 9.26v15.712c0 .3-.18.538-.54.538l-4.604-.06zm11.82 8.782c-.3 0-.54-.18-.54-.538v-4.122c0-.3.18-.537.54-.537h.897c1.974 0 2.93-.897 3.708-2.928l.718-2.09-9.032-23.48c-.117-.298.12-.537.42-.537h5.085c.3 0 .538.18.598.538l5.562 16.25h.12l5.323-16.25c.12-.3.3-.538.597-.538h4.845c.298 0 .538.18.418.538l-9.33 25.987c-2.153 5.914-4.187 7.767-8.313 7.767l-1.615-.06zM49.67 39.622c.42-1.313.538-2.51.538-4.6s-.12-3.225-.538-4.6c-.718-2.09-2.333-3.225-4.605-3.225-2.273 0-3.947 1.195-4.665 3.226-.42 1.314-.54 2.45-.54 4.6 0 2.09.12 3.286.54 4.6.718 2.09 2.333 3.227 4.665 3.227 2.272.06 3.887-1.136 4.605-3.227m-14.832 1.553C34.3 39.444 34 37.772 34 35.023c0-2.748.24-4.36.838-6.153C36.213 24.51 39.98 22 45.005 22c4.964 0 8.732 2.51 10.107 6.87.54 1.732.838 3.405.838 6.153 0 2.75-.24 4.36-.838 6.153-1.375 4.36-5.143 6.87-10.107 6.87-4.964 0-8.732-2.51-10.167-6.87M155.288 22c-4.068 0-6.76.956-8.733 2.45-.18.18-.24.418-.12.656l1.914 3.406c.177.238.477.298.715.12 1.197-.956 2.87-1.733 5.622-1.733 4.008 0 5.384 1.192 5.503 3.88v8.305c0 2.867-1.973 4.24-5.502 4.24-2.75 0-4.245-1.014-4.245-3.105 0-2.33 1.614-3.345 5.322-3.345h1.137c.298 0 .538-.18.538-.537v-3.286c0-.298-.18-.538-.538-.538h-2.034c-6.1 0-9.868 2.51-9.868 7.886 0 5.197 3.768 7.588 8.313 7.588 3.47 0 5.8-1.195 6.938-2.868h.06v1.792c0 .3.18.538.54.538h4.306c.3 0 .54-.18.54-.538v-16.19C165.572 24.63 162.82 22 155.286 22M94.732 32.514c-.12 0-.24.06-.24.24v3.883c0 .12.06.24.24.24h12.68c.358 0 .538-.18.538-.538 0-4.004-.24-5.736-.838-7.47-1.376-4.24-5.084-6.87-10.168-6.87-4.904 0-8.73 2.51-10.107 6.87C86.3 30.485 86 32.455 86 35.025c0 2.568.36 4.48.897 6.093 1.376 4.36 5.084 6.93 10.287 6.93 4.545 0 8.014-1.733 10.167-4.24.18-.24.18-.54-.06-.718l-2.99-2.69c-.237-.18-.536-.18-.775.12-1.256 1.373-2.99 2.39-5.802 2.39-2.75 0-4.725-1.316-5.502-3.765-.12-.36-.24-.717-.3-1.076a20.057 20.057 0 0 1-.297-3.585c.06-1.434.12-2.33.3-3.465v-.12c.06-.297.118-.536.178-.775.66-2.032 2.513-3.226 4.845-3.226 2.333 0 4.128 1.192 4.785 3.224a7.01 7.01 0 0 1 .298 2.09c0 .18-.12.3-.3.3h-6.995zM81.232 12h-4.725c-.3 0-.538.18-.538.538v23.478c-.06 1.434-.24 2.39-.48 3.226-.66 2.09-2.273 3.167-4.606 3.167-2.273 0-3.888-1.138-4.545-3.17-.36-1.134-.54-2.39-.54-4.66s.18-3.524.54-4.66c.656-2.03 2.21-3.165 4.425-3.225H72.8c.118 0 .178-.12.178-.238v-4.72c0-.12-.06-.18-.18-.24H69.27c-4.126.06-7.117 2.032-8.373 5.975-.598 1.912-.897 3.644-.897 6.99 0 3.345.24 5.078.897 6.99 1.256 4.002 4.366 5.974 8.553 5.974 3.35 0 5.382-1.255 6.52-2.928h.06v1.85c0 .3.178.54.537.54h4.725c.3 0 .538-.18.538-.54V12.3c-.06-.12-.3-.298-.598-.298m123.5 20.512c-.12 0-.24.06-.24.24v3.883c0 .12.06.24.24.24h12.68c.358 0 .538-.18.538-.538 0-4.004-.24-5.736-.838-7.47-1.376-4.24-5.084-6.87-10.168-6.87-4.904 0-8.73 2.51-10.107 6.87-.538 1.615-.837 3.585-.837 6.155 0 2.568.36 4.48.897 6.093 1.376 4.36 5.084 6.93 10.287 6.93 4.545 0 8.014-1.733 10.167-4.24.18-.24.18-.54-.06-.718l-2.987-2.69c-.24-.18-.54-.18-.778.12-1.256 1.374-2.99 2.39-5.802 2.39-2.75 0-4.725-1.315-5.502-3.764-.12-.36-.24-.717-.3-1.076a20.045 20.045 0 0 1-.297-3.584c.06-1.434.12-2.33.3-3.465v-.12c.06-.296.118-.535.178-.774.66-2.032 2.513-3.226 4.845-3.226 2.333 0 4.128 1.193 4.785 3.225a7.01 7.01 0 0 1 .298 2.09c0 .18-.12.3-.3.3h-6.995zM191.232 12h-4.725c-.3 0-.538.18-.538.538v23.538c-.06 1.433-.24 2.39-.48 3.226-.66 2.09-2.273 3.226-4.606 3.226-2.333 0-3.888-1.136-4.545-3.226-.36-1.135-.54-2.39-.54-4.66s.18-3.525.54-4.66c.656-2.03 2.21-3.167 4.425-3.226h2.033c.298 0 .537-.18.537-.538v-4.122c0-.3-.18-.538-.538-.538h-3.47c-4.127.06-7.177 2.032-8.433 5.974-.598 1.912-.897 3.645-.897 7.05 0 3.346.24 5.138.897 7.05 1.256 4.002 4.366 5.974 8.553 5.974 3.35 0 5.382-1.255 6.58-2.927h.058v1.85c0 .3.18.537.538.537h4.725c.3 0 .54-.18.54-.538V12.477c-.12-.3-.36-.478-.658-.478M123 55v4c0 .752.175 1 1 1h16c.767 0 1-.186 1-1v-4c0-.752-.175-1-1-1h-17c.175 0 0 .186 0 1">
+                    </path>
+                    <path
+                        d="M6.99 54H6c.12-.06 0-.238 0 0V6c0 .238.12.06 0 0h107c-.12.06 0 .238 0 0v47c0 .703-.12.88 0 1H6.99zM119 0c-.12.18-.12.12 0 0-.12.12-.12.12 0 0-.24.06-.36 0-1 0H0c.12.12 0 .3 0 1v59c0-.3.06-.18 0 0h118c.64 0 .76-.06 1 0-.06-.24 0-.36 0-1V0z">
+                    </path>
+                </g>
+            </svg></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Course Catalog <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Resources
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Cheatsheets</a>
+                        <a class="dropdown-item" href="#">Articles</a>
+                        <a class="dropdown-item" href="#">Blog</a>
+
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Community
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Forums</a>
+                        <a class="dropdown-item" href="#">Chapters</a>
+                        <a class="dropdown-item" href="#">Events</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Plans + Pricing
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Pro Membership</a>
+                        <a class="dropdown-item" href="#">For Business</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="#">For Student</a>
+                    </div>
+                </li>
+            </ul>
+            <form class="form-inline d-flex justify-content-end">
+                <button class="btn " type="button">Login</button>
+                <button class="btn  btn-dark" type="button">Sign Up</button>
+
+            </form>
+        </div>
+    </nav>
+
+    <div class="jumbotron bg-white h-auto">
+        <div class="container-sm d-flex justify-content-between h-auto">
+            <div class="d-flex align-items-center"
+                style="background-image: url(./assets/pic1.webp); background-repeat: no-repeat; background-size: 70%; background-position: right; width: 60%;">
+
+
+                <h2 class=" font-weight-bold"
+                    style="background-color: #6400e4; color:white; padding:20px; width: fit-content; height: fit-content">
+                    Join
+                    the Millions<br>
+                    Learning to Code
+                    <br> with
+                    Codecademy
+                </h2>
+            </div>
+            <div style="width: 30%;">
+
+                <form class="font-weight-bold ">
+                    <div class="form-group">
+                        <h4 class="font-weight-bold" style="margin-bottom:20px">Get Started for Free</h4>
+                        <label for="exampleInputEmail1">Email</label>
+                        <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+                    </div>
+                    <div class="form-group">
+                        <label for="exampleInputPassword1">Password</label>
+                        <input type="password" class="form-control" id="exampleInputPassword1">
+                    </div>
+
+                    <button type="submit" class="btn btn-primary w-100 font-weight-bold"
+                        style="background-color: #6400e4 ;">Start Coding Now</button>
+                    <div style="font-size: smaller; font-weight: lighter; margin-top: 15px;">
+                        <p>
+                            By signing up for Codecademy, you agree to Codecademy's
+                            <a href="" style="color: #6400e4;">Terms of Service</a> &
+                            <a href="" style="color: #6400e4;">Privacy Policy.</a>
+
+                        </p>
+                    </div>
+                    <div>
+                        <p style="font-weight: 700;">Or sign up using:</p>
+                    </div>
+                    <div>
+                        <button type="button" class="btn btn-light"><svg width="18" height="18" viewBox="0 0 980 980"
+                                xmlns="http://www.w3.org/2000/svg">
+                                <title>LinkedIn</title>
+                                <path
+                                    d="M882 0H98C44.1 0 0 44.1 0 98v784c0 53.9 44.1 98 98 98h784c53.9 0 98-44.1 98-98V98c0-53.9-44.1-98-98-98zM294 833H147V392h147v441zm-73.5-524.3c-49 0-88.2-39.2-88.2-88.2s39.2-88.2 88.2-88.2 88.2 39.2 88.2 88.2-39.2 88.2-88.2 88.2zM833 833H686V573.3c0-39.2-34.3-73.5-73.5-73.5S539 534.1 539 573.3V833H392V392h147v58.8c24.5-39.2 78.4-68.6 122.5-68.6 93.1 0 171.5 78.4 171.5 171.5V833z"
+                                    fill="#0E76A8" fill-rule="nonzero"></path>
+                            </svg></button>
+                        <button type="button" class="btn btn-light"> <svg width="18" height="18">
+                                <title>Google</title>
+                                <g fill="none" fill-rule="evenodd">
+                                    <path
+                                        d="M9 3.48c1.69 0 2.83.73 3.48 1.34l2.54-2.48C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.96l2.91 2.26C4.6 5.05 6.62 3.48 9 3.48z"
+                                        fill="#EA4335"></path>
+                                    <path
+                                        d="M17.64 9.2c0-.74-.06-1.28-.19-1.84H9v3.34h4.96c-.1.83-.64 2.08-1.84 2.92l2.84 2.2c1.7-1.57 2.68-3.88 2.68-6.62z"
+                                        fill="#4285F4"></path>
+                                    <path
+                                        d="M3.88 10.78A5.54 5.54 0 0 1 3.58 9c0-.62.11-1.22.29-1.78L.96 4.96A9.008 9.008 0 0 0 0 9c0 1.45.35 2.82.96 4.04l2.92-2.26z"
+                                        fill="#FBBC05"></path>
+                                    <path
+                                        d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.84-2.2c-.76.53-1.78.9-3.12.9-2.38 0-4.4-1.57-5.12-3.74L.97 13.04C2.45 15.98 5.48 18 9 18z"
+                                        fill="#34A853"></path>
+                                    <path d="M0 0h18v18H0V0z"></path>
+                                </g>
+                            </svg></button>
+                        <button type="button" class="btn btn-light"><svg width="18" height="18">
+                                <title>Facebook</title>
+                                <path
+                                    d="M18 1v16c0 .5-.4 1-1 1h-4.6v-7h2.3l.3-2.7h-2.7V6.6c0-.8.2-1.3 1.4-1.3h1.4V2.8c-.2 0-1.1-.1-2.1-.1-2 0-3.4 1.3-3.4 3.6v2H7.3V11h2.3v7H1c-.5 0-1-.4-1-1V1c0-.5.4-1 1-1h16c.6 0 1 .4 1 1z"
+                                    fill="#3B5998" fill-rule="evenodd"></path>
+                            </svg></button>
+                        <button type="button" class="btn btn-light"><svg width="18" height="18">
+                                <title>Github</title>
+                                <path
+                                    d="M9 0C4.027 0 0 4.03 0 9a9 9 0 0 0 6.154 8.539c.45.084.615-.194.615-.433 0-.214-.008-.78-.011-1.53-2.504.543-3.032-1.208-3.032-1.208-.41-1.039-1.001-1.316-1.001-1.316-.816-.558.063-.546.063-.546.903.063 1.378.926 1.378.926.803 1.376 2.107.98 2.621.749.081-.582.313-.98.57-1.204-1.999-.225-4.099-1-4.099-4.447 0-.982.349-1.786.926-2.416-.101-.227-.405-1.141.079-2.381 0 0 .753-.242 2.475.922a8.66 8.66 0 0 1 2.25-.304 8.66 8.66 0 0 1 2.25.304c1.71-1.164 2.463-.922 2.463-.922.484 1.24.18 2.154.09 2.381.574.63.923 1.434.923 2.416 0 3.457-2.104 4.219-4.106 4.44.315.27.607.821.607 1.665 0 1.204-.011 2.171-.011 2.464 0 .236.157.517.619.427A8.968 8.968 0 0 0 18 9a9 9 0 0 0-9-9"
+                                    fill-rule="evenodd"></path>
+                            </svg></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div class=" container-fluid"
+        style="background-image: url(./assets/bg-blue.svg); background-repeat: no-repeat; background-size: cover;">
+
+
+        <div class="container d-flex flex-row" style="background-color: #6400e4;">
+            <div class="w-100  d-flex flex-row justify-content-between align-items-center "
+                style="padding:35px 35px 0 35px">
+
+
+                <div class="w-25 mr-5 mb-5">
+
+                    <h1 class="display-4 font-weight-bold text-light">Not sure where to <span style="color:#ffd500">
+                            begin?
+                        </span>
+                    </h1>
+                    <p class="text-light" style="font-size: 1.1rem; ">No
+                        need to
+                        worry, we’ll help you make sense of it all.</p>
+                    <button type="button" class="btn font-weight-bolder rounded-pill
+                " style="background-color: #ffd500;">Take Our Quiz</button>
+                </div>
+
+                <div class="w-75">
+                    <svg width="760" height="360" xmlns="http://www.w3.org/2000/svg" class="w-100 h-auto">
+                        <g fill="none" fill-rule="evenodd">
+                            <path fill="#6400E4" d="M0 0h760v360H0z" />
+                            <path d="M633 256v-96h127v200H0V200h127v40h126v40h127v-60h127v36h126z" fill="#141C3A" />
+                            <circle fill="#FFE359" cx="117" cy="170" r="30" />
+                            <path d="M127 200l506-37.81" stroke="#FFF" stroke-width="2" stroke-linecap="round"
+                                stroke-dasharray="1,7" />
+                        </g>
+                    </svg>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid py-5" style="background-color:#f1f3fe;">
+
+        <div class="container d-flex justify-content-center" style="margin-top: 50px;">
+
+            <div class="w-100  ">
+
+                <div class="h2 font-weight-bolder d-flex justify-content-center">
+                    <center>
+                        First, we invented the best system for learning to code. Seven years and 45 million
+                        learners
+                        later,
+                        we've
+                        perfected it.
+                    </center>
+
+                </div>
+
+                <div class="d-flex justify-content-around align-items-center" style="margin-top: 100px;">
+                    <div style="width: 28%; " class="display-4">
+                        <center>
+
+                            1
+                        </center>
+                    </div>
+                    <div style=" width: 28%;">
+                        <img src="https://www.codecademy.com/webpack/1ca54a931e939a92042749dc8e8036d7.png" alt="">
+                    </div>
+                    <div style="width: 28%;">
+
+                        <h3 class="font-weight-bolder">
+                            Choose what to learn
+                        </h3>
+
+                        <div style="font-size: 16px;">
+
+                            From building websites to analyzing data, the choice is yours. Not sure where to
+                            start?
+                            We'll point you in the right direction.
+                        </div>
+
+                    </div>
+                </div>
+                <div class="d-flex justify-content-around align-items-center" style="margin-top: 100px;">
+                    <div style="width: 28%;" class="display-4">
+                        <center>
+
+                            2
+                        </center>
+                    </div>
+                    <div style="width: 28%;">
+                        <img src="https://www.codecademy.com/webpack/0f483471fc5de0fc55d12a9cc626c020.png" alt="">
+                    </div>
+                    <div style="width: 28%;">
+
+                        <h3 class="font-weight-bolder">
+                            Learn by doing </h3>
+
+                        <div style="font-size: 16px;">
+
+                            No matter your experience level, you'll be writing real, working code in
+                            minutes.
+                        </div>
+
+                    </div>
+                </div>
+                <div class="d-flex justify-content-around align-items-center" style="margin-top: 100px;">
+                    <div style="width: 28%;" class="display-4">
+                        <center>
+
+                            3
+                        </center>
+                    </div>
+                    <div style="width: 28%;">
+                        <img src="https://www.codecademy.com/webpack/82298a46582c30688e1100c115c872e2.png" alt="">
+                    </div>
+                    <div style="width: 28%;">
+
+                        <h3 class="font-weight-bolder">
+                            Get instant feedback
+                        </h3>
+
+                        <div style="font-size: 16px;">
+
+                            Your code is tested as soon as you submit it, so you always know if you're on
+                            the right
+                            track.
+                        </div>
+
+                    </div>
+                </div>
+                <div class="d-flex justify-content-around align-items-center" style="margin-top: 100px;">
+                    <div style="width: 28%;" class="display-4">
+                        <center>
+
+                            4
+                        </center>
+                    </div>
+                    <div style="width: 28%;">
+                        <img src="https://www.codecademy.com/webpack/75f7f135f11eb64f3f410110fd920b4a.png" alt="">
+                    </div>
+                    <div style="width: 28%;">
+
+                        <h3 class="font-weight-bolder">
+                            Put your learning into practice
+                        </h3>
+
+                        <div style="font-size: 16px;">
+
+                            Apply your learning with real-world projects and test your knowledge with
+                            tailor-made
+                            quizzes.
+                        </div>
+
+                    </div>
+                </div>
+                <div class="d-flex justify-content-around align-items-center" style="margin-top: 100px;">
+                    <div style="width: 28%;" class="display-4">
+                        <center>
+
+                            5
+                        </center>
+                    </div>
+                    <div style="width: 28%;">
+                        <img src="https://www.codecademy.com/webpack/7a8e6dff611cd922d8e8c596115de97e.png" alt="">
+                    </div>
+                    <div style="width: 28%;">
+
+                        <h3 class="font-weight-bolder">
+                            Land your dream job
+                        </h3>
+
+                        <div style="font-size: 16px;">
+
+                            Coding skills have never been more in-demand. Learn everything you need to take
+                            your career
+                            to the next level.
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="container-fluid"
+        style="background-color: #141c3a; padding-bottom: 100px; background-image: url(./assets/bg-navy.svg); background-repeat: no-repeat;">
+        <div class="container w-100 d-flex justify-content-center" style="position: relative;">
+
+            <div style="padding:50px; width: 60%; ">
+                <div class="display-4 font-weight-bolder" style="color: white;">
+                    <center>
+                        Tell us<span style="color:turquoise">
+                            why
+                        </span>
+                        you want to
+                        learn to code <br>
+                        We'll
+                        show you
+                        <span style="color:#ffd500 ;">
+                            what
+                        </span>
+                        to learn
+
+                    </center>
+                </div>
+            </div>
+        </div>
+
+        <div class="w-100 d-flex justify-content-around align-items-end h-100" style="color: white; margin-top: 80px;">
+            <div class="h2 font-weight-bold " style="width: 30%; margin-right: 30px;">
+                <center>
+
+                    Web Development
+                </center>
+                <div class="border-bottom" style="margin:20px 0 20px 0">
+
+                </div>
+                <div style="font-size:16px; margin-bottom: 20px; padding-left: 16px;">
+
+                    <ul class="list-group list-group-horizontal">
+                        <li style="margin-right: 30px;">HTML/CSS</li>
+                        <li>JAVASCRIPT</li>
+                    </ul>
+
+                </div>
+                <p class="font-weight-lighter" style="font-size:16px;">
+                    Master the languanges of the web: HTML, CSS, and JavaScript. This path will prepare you
+                    to build
+                    basic websites then build interactive web apps.
+                </p>
+            </div>
+            <div class="h2 font-weight-bold " style="width: 30%; margin-right: 30px;">
+                <center>
+
+                    Programming and <br> Computer Science
+                </center>
+                <div class="border-bottom " style="margin:20px 0 20px 0">
+
+                </div>
+                <div style="font-size:16px;margin-bottom: 20px;">
+
+                    <ul class="list-group list-group-horizontal">
+                        <li style="margin-right: 30px;">PYTHON</li>
+                        <li>CMD LINE</li>
+                    </ul>
+
+                </div>
+                <p class="font-weight-lighter" style="font-size:16px;">
+                    Learn Python fundamentals, one of the hottest and fastest growing programming languages.
+                    This is a
+                    great introduction to the world of code.
+                </p>
+            </div>
+            <div class="h2 font-weight-bold " style="width: 30%;">
+
+                <center>
+
+                    Data Science
+                </center>
+                <div class="border-bottom" style="margin:20px 0 20px 0">
+
+                </div>
+                <div style="font-size:16px;margin-bottom: 20px;">
+
+                    <ul class="list-group list-group-horizontal">
+                        <li style="margin-right: 30px;">PYTHON</li>
+                        <li>SQL</li>
+                    </ul>
+
+                </div>
+                <p class="font-weight-lighter" style="font-size:16px;">
+                    Learn SQL and Python and build the skills you need to analyze data. Great for anyone
+                    trying to use
+                    code to be more data-driven.
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid d-flex  justify-content-center" style="background-color:#6400e4; padding: 200px;">
+        <div class="w-75 " style="color:white; ">
+            <center>
+                <div class="display-4" style="font-weight:600; margin-bottom: 20px;">
+                    It's time to start <br>
+                    investing in yourself
+                </div>
+                <p style="font-size:18px">
+                    Because learning to code might be the easiest way to change your career.
+                </p>
+                <button type="button" class="btn btn-outline-light font-weight-bolder rounded-pill"
+                    style="padding: 15px 90px 15px 90px; margin-top: 30px;">Get Started</button>
+            </center>
+        </div>
+    </div>
+
+    <div class="container-fluid bg-white d-flex " style="padding-left: 150px; padding-right: 150px;">
+
+
+        <div class="w-50 border-right m-5">
+            <div class="row d-flex ">
+                <div class="col">
+                    Company
+                    <div class="mt-2">
+                        <a href="" class="text-decoration-none text-dark">
+                            About
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            We're Hiring
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Shop
+                        </a>
+                    </div>
+                    <div class="d-flex ">
+                        <a aria-label="Follow us on Twitter" href="https://twitter.com/Codecademy" target="_blank"
+                            rel="noopener noreferrer" style="margin-right: 10px;"><svg viewBox="0 0 16 16" width="16px"
+                                height="16px" fill="currentColor" role="img">
+                                <title>Twitter Icon</title>
+                                <path fill="currentColor"
+                                    d="M16 3c-.6.3-1.2.4-1.9.5.7-.4 1.2-1 1.4-1.8-.6.4-1.3.6-2.1.8-.6-.6-1.5-1-2.4-1-1.7 0-3.2 1.5-3.2 3.3 0 .3 0 .5.1.8-2.7-.2-5.2-1.5-6.8-3.5-.3.5-.4 1.1-.4 1.6 0 1.1.6 2.1 1.5 2.7-.5 0-1-.2-1.5-.4 0 1.6 1.1 2.9 2.6 3.2-.3.2-.6.2-.9.2-.2 0-.4 0-.6-.1.4 1.3 1.6 2.3 3.1 2.3-1.1.9-2.5 1.4-4.1 1.4H0c1.5.9 3.2 1.5 5 1.5 6 0 9.3-5 9.3-9.3v-.4C15 4.3 15.6 3.7 16 3z">
+                                </path>
+                            </svg></a>
+                        <a aria-label="Like us on Facebook" class="icon__2ZPoun5lNFAnk37JQ5lkDl"
+                            href="https://codecademy.com/users/redirect?redirect_url=https://www.facebook.com/groups/codecademy.community"
+                            target="_blank" rel="noopener noreferrer" style="margin-right: 10px;"><svg
+                                viewBox="0 0 16 16" width="16px" height="16px" fill="currentColor" role="img">
+                                <title>Facebook Icon</title>
+                                <path fill="currentColor"
+                                    d="M6.1 16V8.5h-2V5.8h2V3.5C6.1 1.7 7.3 0 10 0c1.1 0 1.9.1 1.9.1l-.1 2.5h-1.7C9.1 2.6 9 3 9 3.8v2h2.9l-.1 2.7H8.9V16H6.1z">
+                                </path>
+                            </svg></a>
+                        <a aria-label="Follow us on Instagram" class="icon__2ZPoun5lNFAnk37JQ5lkDl"
+                            href="https://instagram.com/codecademy" target="_blank" rel="noopener noreferrer"
+                            style="margin-right: 10px;"><svg viewBox="0 0 16 16" width="16px" height="16px"
+                                fill="currentColor" role="img">
+                                <title>Instagram Icon</title>
+                                <path fill="currentColor"
+                                    d="M14 16H2c-1.1 0-2-.9-2-2V2C0 .9.9 0 2 0h12c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2zM8 4.9c-1.2 0-2.3.7-2.8 1.8 0 .1-.1.1-.1.2V7c-.1.1-.1.2-.1.2v.7C5 9.6 6.4 11 8.1 11s3.1-1.4 3.1-3.1v-.7s0-.1-.1-.2v-.1c0-.1-.1-.1-.1-.2-.7-1.1-1.8-1.8-3-1.8zm6.2-2.3c0-.4-.4-.8-.8-.8h-1.6c-.4 0-.8.4-.8.8v1.6c0 .4.4.8.8.8h1.6c.4 0 .8-.4.8-.8V2.6zm0 4.1h-1.5c.1.4.2.8.2 1.3 0 2.7-2.2 4.9-4.9 4.9S3.1 10.7 3.1 8c0-.5.1-.9.2-1.3H1.8v6.7c0 .4.4.8.8.8h10.8c.4 0 .8-.4.8-.8V6.7z">
+                                </path>
+                            </svg></a>
+                        <a aria-label="Subscribe to Codecademy on YouTube" class="icon__2ZPoun5lNFAnk37JQ5lkDl"
+                            href="https://www.youtube.com/channel/UC5CMtpogD_P3mOoeiDHD5eQ" target="_blank"
+                            rel="noopener noreferrer" style="margin-right: 10px;"><svg viewBox="0 0 24 24" width="16px"
+                                height="16px" fill="currentColor" role="img">
+                                <title>Youtube Icon</title>
+                                <path
+                                    d="M5.9 5.12v4.26a.75.75 0 001.5 0V5.12l2.85-3.8A.75.75 0 109 .42l-2.4 3.2L4.25.42a.75.75 0 10-1.2.9zm3.55-.24v3a2.25 2.25 0 004.5 0v-3a2.25 2.25 0 10-4.5 0zm1.5 0a.75.75 0 111.5 0v3a.75.75 0 01-1.5 0zm4.86 4.44a2.73 2.73 0 001.94.8 2.72 2.72 0 001.36-.38.74.74 0 00.64.38.75.75 0 00.75-.75v-6a.75.75 0 00-1.5 0v4a1.25 1.25 0 01-1.25 1.25 1.25 1.25 0 01-1.25-1.25v-4a.75.75 0 10-1.5 0v4a2.73 2.73 0 00.81 1.95zm2.69 8.05a.5.5 0 00-1 0v.5h1zm-4.5-.5a.5.5 0 00-.5.5v2a.5.5 0 001 0v-2a.5.5 0 00-.5-.5z">
+                                </path>
+                                <path
+                                    d="M19 11.87H5a4.5 4.5 0 00-4.5 4.5v3a4.5 4.5 0 004.5 4.5h14a4.5 4.5 0 004.5-4.5v-3a4.5 4.5 0 00-4.5-4.5zm-11 4H6.5v4.48a.5.5 0 01-1 0v-4.48H4a.5.5 0 010-1h4a.5.5 0 110 1zm3.48 3.5v1a.5.5 0 01-.86.35 1.48 1.48 0 01-.64.15 1.5 1.5 0 01-1.5-1.5v-3a.5.5 0 011 0v3a.5.5 0 001 0v-3a.5.5 0 011 0zm4 0a1.5 1.5 0 01-1.5 1.5 1.48 1.48 0 01-.66-.16.5.5 0 01-.84-.36v-6a.5.5 0 011 0V16a1.48 1.48 0 01.5-.09 1.5 1.5 0 011.5 1.5zm2.59 1.5a1.69 1.69 0 01-1.59-1.62v-1.88a1.5 1.5 0 013 0v1a.5.5 0 01-.5.5H17.5v.38a.7.7 0 00.59.62c.23 0 .59-.1.59-.37a.5.5 0 011 0 1.46 1.46 0 01-1.59 1.37z">
+                                </path>
+                            </svg></a>
+                    </div>
+                </div>
+                <div class="col">
+                    Resources
+                    <div class="mt-2">
+                        <a href="" class="text-decoration-none text-dark">
+                            About
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            We're Hiring
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Shop
+                        </a>
+                    </div>
+                </div>
+                <div class="col">
+                    Community
+                    <div class="mt-2">
+                        <a href="" class="text-decoration-none text-dark">
+                            About
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            We're Hiring
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Shop
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col mt-5">
+                    MOBILE
+                    <div style="width: 100px;">
+                        <a href="">
+
+
+                            <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&amp;releaseDate=1533168000"
+                                alt="Download on the App Store" style="width: 120px; height: auto;">
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="d-flex justify-content-start">
+
+                            <img alt="Get it on Google Play"
+                                src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
+                                style="width: 150px; height: auto; padding:0">
+                        </a>
+                    </div>
+                </div>
+                <div class="col">INDIVIDUAL PLANS
+                    <div class="mt-2">
+                        Pro Membership
+                    </div>
+                    <div>
+                        Students
+                    </div>
+                    <div style="margin-top:20px">
+                        SUPPORT
+                        <div class="mt-2">
+                            Help Center
+                        </div>
+                    </div>
+                </div>
+                <div class="col">ENTERPRISE PLANS
+                    <div class="mt-2">
+                        For Business
+                    </div>
+                    <div>
+                        For Education
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="w-50 my-5">
+            <div class="pb-2">
+                <div>
+                    COURSE CALATOG
+                </div>
+
+            </div>
+            <div class="row d-flex ">
+                <div class="col">
+                    <div style="font-weight: 600; font-size: smaller;">
+                        Subjects
+                    </div>
+                    <div class="mt-2">
+                        <a href="" class="text-decoration-none text-dark">
+                            Web Development
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Data Science
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Computer Science
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Developer Tools
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Machine Learning
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Code Foundation
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Web Design
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            -
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Full Catalog
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Beta Content
+                        </a>
+                    </div>
+                    <div>
+                        <a href="" class="text-decoration-none text-dark">
+                            Road Map
+                        </a>
+                    </div>
+
+
+                </div>
+                <div class="col d-flex">
+                    <div>
+                        <div style="font-weight: 600; font-size: smaller;">
+                            Languages
+                        </div>
+
+                        <div class="mt-2">
+                            <a href="" class="text-decoration-none text-dark">
+                                HTML & CSS
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                Python
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                JavaScript
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                Java
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                SQL
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                Bash/Shell
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                C++
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                R
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                C#
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                PHP
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                Go
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                Swift
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                Kotlin
+                            </a>
+                        </div>
+                        <div>
+                            <a href="" class="text-decoration-none text-dark">
+                                PHP
+                            </a>
+                        </div>
+                    </div>
+
+
+
+                </div>
+
+
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container-fluid bg-white d-flex p-5 justify-content-between border-top">
+        <div class="d-flex ">
+            <div>
+                <a href="" class="text-decoration-none" style="font-size: 14px; color: black;">Privacy
+                    Policy
+                    |&nbsp;</a>
+            </div>
+            <div>
+                <a href="" class="text-decoration-none" style="font-size: 14px; color: black;">Cookie Policy
+                    |&nbsp;</a>
+            </div>
+            <div>
+                <a href="" class="text-decoration-none" style="font-size: 14px; color: black;">Do Not Sell
+                    My Personal
+                    Information
+                    |&nbsp;</a>
+            </div>
+            <div>
+                <a href="" class="text-decoration-none" style="font-size: 14px; color: black;">Terms</a>
+            </div>
+        </div>
+
+        <div>
+            <div>Made with️❤️in NYC © 2020 Codecademy</div>
+        </div>
+
+
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+</script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+</script>
+
+</html>
