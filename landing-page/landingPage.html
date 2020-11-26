@@ -17,11 +17,12 @@
         }
 
         a {
-            color: black;
+            color: black !important;
+            text-decoration: none !important;
         }
 
         a:hover {
-            color: royalblue;
+            color: royalblue !important;
         }
 
         button {
@@ -29,6 +30,8 @@
         }
 
         button:hover {
+            transition: 250ms;
+            transition-timing-function: cubic-bezier(0.23, 1, 0.320, 1);
             box-shadow: 0 3px 10px 1px #494949;
         }
 
@@ -100,8 +103,8 @@
                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                         <a class="dropdown-item" href="#">Pro Membership</a>
                         <a class="dropdown-item" href="#">For Business</a>
-                        <div class="dropdown-divider"></div>
                         <a class="dropdown-item" href="#">For Student</a>
+
                     </div>
                 </li>
             </ul>
@@ -493,7 +496,7 @@
         </div>
     </div>
 
-    <div class="container-fluid bg-white d-flex " style="padding-left: 150px; padding-right: 150px;">
+    <div class="container-fluid  d-flex bg-white" style="padding-left: 150px; padding-right: 150px;">
 
 
         <div class="w-50 border-right m-5">
@@ -596,20 +599,20 @@
             <div class="row">
                 <div class="col mt-5">
                     MOBILE
-                    <div style="width: 100px;">
+                    <div>
                         <a href="">
 
 
                             <img src="https://tools.applemediaservices.com/api/badges/download-on-the-app-store/black/en-US?size=250x83&amp;releaseDate=1533168000"
-                                alt="Download on the App Store" style="width: 120px; height: auto;">
+                                alt="Download on the App Store" style="width: 60%; height: auto;">
                         </a>
                     </div>
                     <div>
-                        <a href="" class="d-flex justify-content-start">
+                        <a href="" class=" d-flex justify-content-start">
 
                             <img alt="Get it on Google Play"
                                 src="https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png"
-                                style="width: 150px; height: auto; padding:0">
+                                style="width: 60%; height: auto; padding:0">
                         </a>
                     </div>
                 </div>
@@ -629,10 +632,11 @@
                 </div>
                 <div class="col">ENTERPRISE PLANS
                     <div class="mt-2">
-                        For Business
+                        <a href="" class="text-decoration-none text-dark">For Business
+                        </a>
                     </div>
                     <div>
-                        For Education
+                        <a href="" class="text-decoration-none text-dark">For Education</a>
                     </div>
                 </div>
 
@@ -796,7 +800,7 @@
 
     </div>
 
-    <div class="container-fluid bg-white d-flex p-5 justify-content-between border-top">
+    <div class="container-fluid bg-white d-flex p-5 justify-content-between border-top border-dark">
         <div class="d-flex ">
             <div>
                 <a href="" class="bottom-url">Privacy

@@ -410,6 +410,10 @@ body {
 	display: flex;
 	justify-content: flex-end;
 }
+.animated-arrow:hover {
+	transition: all 100ms ease 0s;
+	animation-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
 .top-right-clickable {
 	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1vw;
