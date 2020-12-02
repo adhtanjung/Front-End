@@ -1,0 +1,132 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "username": "Adhi",
+      "password": "abc"
+    },
+    {
+      "id": 2,
+      "username": "Tanjung",
+      "password": "abc"
+    },
+    {
+      "id": 3,
+      "username": "Indriawan",
+      "password": "abc"
+    },
+    {
+      "username": "susilo",
+      "password": "asd",
+      "id": 4
+    },
+    {
+      "username": "susilo",
+      "password": "asd",
+      "id": 5
+    },
+    {
+      "username": "asd",
+      "password": "asd",
+      "id": 6
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "nama": "Mangga",
+      "link": "https://www.pngarts.com/files/1/Mango-PNG-Photo.png",
+      "keterangan": "wah enak mangga"
+    },
+    {
+      "id": 2,
+      "nama": "Kelapa",
+      "link": "https://www.pngarts.com/files/6/Coconut-Water-Splash-PNG-Transparent-Image.png",
+      "keterangan": "wah enak semangka"
+    },
+    {
+      "id": 3,
+      "nama": "Jeruk",
+      "link": "http://www.pngall.com/wp-content/uploads/2016/05/Orange-PNG-Image.png",
+      "keterangan": "wah enak jeruk"
+    },
+    {
+      "nama": "asd",
+      "link": "asdsd",
+      "keterangan": "asda",
+      "id": 4
+    },
+    {
+      "nama": "asd",
+      "link": "asdsa",
+      "keterangan": "dadsa",
+      "id": 5
+    },
+    {
+      "nama": "as",
+      "link": "dasd",
+      "keterangan": "dasda",
+      "id": 6
+    },
+    {
+      "nama": "zxc",
+      "link": "zxc",
+      "keterangan": "zcxz",
+      "id": 7
+    },
+    {
+      "nama": "zxcasd",
+      "link": "zxc",
+      "keterangan": "zcxz",
+      "id": 8
+    },
+    {
+      "nama": "asd",
+      "link": "zxcasd",
+      "keterangan": "zcxz",
+      "id": 9
+    },
+    {
+      "nama": "asd",
+      "link": "zxcasd",
+      "keterangan": "zcxzasdasd",
+      "id": 10
+    },
+    {
+      "nama": "aaaaaaaaaa",
+      "link": "zxcasdaaaaaaaaaaaa",
+      "keterangan": "zcxzasdasdaaaaaaaaaaaa",
+      "id": 11
+    },
+    {
+      "nama": "aaaaaaaaaa",
+      "link": "zxcasdaaaaaaaaaaaa",
+      "keterangan": "zcxzasdasdaaaaaaaaaaaa",
+      "id": 12
+    },
+    {
+      "nama": "aaaaaaaaaa",
+      "link": "zxcasdaaaaaaaaaaaa",
+      "keterangan": "zcxzasdasdaaaaaaaaaaaa",
+      "id": 13
+    },
+    {
+      "nama": "aaaaaaaaaaaaa",
+      "link": "zxcasdaaaaaaaaaaaa",
+      "keterangan": "zcxzasdasdaaaaaaaaaaaa",
+      "id": 14
+    },
+    {
+      "nama": "asd",
+      "link": "asd",
+      "keterangan": "adsad",
+      "id": 15
+    },
+    {
+      "nama": "z",
+      "link": "xczx",
+      "keterangan": "czcx",
+      "id": 16
+    }
+  ]
+}
