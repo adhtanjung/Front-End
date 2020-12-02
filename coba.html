@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Document</title>
+	</head>
+	<body>
+		<div>
+			<h1>Click the button!</h1>
+		</div>
+		<div>
+			<div>
+				<button onclick="segitigaType1()">Type 1</button>
+				<button onclick="segitigaType2()">Type 2</button>
+			</div>
+		</div>
+		<br />
+
+		<div id="output"></div>
+	</body>
+	<script>
+		let num = 4;
+
+		const segitigaType1 = () => {
+			let output = "";
+			num++;
+			for (let i = 1; i <= num; i++) {
+				for (let j = 0; j < i; j++) {
+					if (j % 3 === 0) {
+						output += "*";
+					} else if (output[output.length - 1] === "#") {
+						output += "@";
+					} else {
+						output += "#";
+					}
+				}
+				output += "<br>";
+			}
+			return (document.getElementById("output").innerHTML = output);
+		};
+		const segitigaType2 = () => {
+			let output = "";
+			num++;
+
+			for (let i = 1; i <= num; i++) {
+				for (let j = 0; j < i; j++) {
+					if (i % 2 === 0) {
+						output += "#";
+					} else {
+						output += "*";
+					}
+				}
+				output += "<br>";
+			}
+			return (document.getElementById("output").innerHTML = output);
+		};
+	</script>
+</html>

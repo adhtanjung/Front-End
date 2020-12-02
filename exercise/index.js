@@ -63,20 +63,21 @@ changeEven = (str) => {
 // console.log(changeEven("susilo"));
 
 multiply = (n) => {
-	let output = 0;
-	let num = n - 1;
-	// console.log(num);
-	for (let i = 1; i < n; i++) {
-		if (output == 0) {
-			output += n * num;
-			num--;
-			// console.log(output, n, num);
-		} else {
-			output = output * num;
-			num--;
-		}
-	}
-	return output;
+	// let output = 0;
+	// let num = n - 1;
+	// // console.log(num);
+	// for (let i = 1; i < n; i++) {
+	// 	if (output == 0) {
+	// 		output += n * num;
+	// 		num--;
+	// 		// console.log(output, n, num);
+	// 	} else {
+	// 		output = output * num;
+	// 		num--;
+	// 	}
+	// }
+	// return output;
+	n;
 };
 
 console.log(multiply(5));
@@ -85,3 +86,7 @@ console.log(multiply(8));
 console.log(multiply(9));
 console.log(multiply(3));
 console.log(multiply(2));
+// ! do not run this!
+// ? has to be fixed
+// * run this first
+//
