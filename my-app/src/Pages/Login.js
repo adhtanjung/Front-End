@@ -2,6 +2,8 @@ import Axios from "axios";
 import React, { Component } from "react";
 import { Input, Button } from "reactstrap";
 import { Link } from "react-router-dom";
+import { connect } from "react-redux";
+import { increaseCount, decreaseCount, loginAction } from "../Redux";
 
 class LoginPage extends Component {
 	state = {
@@ -24,6 +26,8 @@ class LoginPage extends Component {
 	clickToLogin = () => {
 		let userN = this.state.loginInfo.username;
 		let passw = this.state.loginInfo.password;
+
+		this.props.loginAction(userN);
 		Axios.get(`http://localhost:2000/users?username=${userN}&password=${passw}`)
 			.then((res) => {
 				console.log(res.data);
@@ -64,10 +68,20 @@ class LoginPage extends Component {
 							<Button>or Register</Button>
 						</Link>
 					</div>
+					<div>{this.props.count}</div>
+					<Button onClick={this.props.decreaseCount}>-</Button>
+					<Button onClick={this.props.increaseCount}>+</Button>
+					<div>{this.props.nama}</div>
 				</div>
 			</div>
 		);
 	}
 }
-
-export default LoginPage;
+const mapStateToProps = (state) => {
+	return { count: state.count, nama: state.username };
+};
+export default connect(mapStateToProps, {
+	decreaseCount,
+	increaseCount,
+	loginAction,
+})(LoginPage);

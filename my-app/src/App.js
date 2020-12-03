@@ -9,6 +9,7 @@ import Home2 from "./Pages/Home2";
 import LoginPage from "./Pages/Login";
 import RegisterPage from "./Pages/Register-page";
 import ProductPage from "./Pages/ProductPage";
+import ReductExercise from "./Pages/ReduxExercise";
 
 class App extends Component {
 	state = {};
@@ -25,6 +26,7 @@ class App extends Component {
 				<Route path="/login" component={LoginPage} />
 				<Route path="/register" component={RegisterPage} />
 				<Route path="/products" component={ProductPage} />
+				<Route path="/redux-exercise" component={ReductExercise} />
 			</div>
 		);
 	}
