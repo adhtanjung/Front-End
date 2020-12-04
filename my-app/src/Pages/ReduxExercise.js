@@ -26,7 +26,7 @@ class ReduxExercise extends Component {
 		}
 	};
 	pushToGlobalArray = () => {
-		let n = Math.random() * 100;
+		let n = Math.round(Math.random() * 100 + 1);
 		this.props.globalArray([n]);
 		// console.log(this.props.data);
 	};
