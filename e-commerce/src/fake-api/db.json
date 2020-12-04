@@ -1,0 +1,94 @@
+{
+  "users": [
+    {
+      "id": 1,
+      "email": "adhtanjung@gmail.com",
+      "password": "asd123"
+    },
+    {
+      "email": "adhtanjung@gmail.com",
+      "password": "asdasd",
+      "id": 2
+    },
+    {
+      "email": "adhtanjung@gmail.com",
+      "password": "asdasd",
+      "id": 3
+    },
+    {
+      "email": "adhtanjung@gmail.com",
+      "password": "asdasd",
+      "id": 4
+    },
+    {
+      "email": "susilo@gmail.com",
+      "password": "asd",
+      "id": 5
+    },
+    {
+      "email": "bambang@gmail.com",
+      "password": "asd",
+      "id": 6
+    },
+    {
+      "email": "zzz@gmail.com",
+      "password": "asd",
+      "id": 7
+    },
+    {
+      "email": "zzx@gmail.com",
+      "password": "aa",
+      "id": 8
+    },
+    {
+      "email": "ccc@gmail.com",
+      "password": "aa",
+      "id": 9
+    },
+    {
+      "email": "xx@gmail.com",
+      "password": "aa",
+      "id": 10
+    },
+    {
+      "email": "zxca@gmail.com",
+      "password": "ss",
+      "id": 11
+    },
+    {
+      "email": "zxcaw2@gmail.com",
+      "password": "asas",
+      "id": 12
+    },
+    {
+      "email": "zczcz@gmail.com",
+      "password": "aa",
+      "id": 13
+    },
+    {
+      "email": "zxc2ss@gmail.com",
+      "password": "aa",
+      "id": 14
+    },
+    {
+      "email": "zxczxcxzczx@gmail.com",
+      "password": "zz",
+      "id": 15
+    },
+    {
+      "email": "zxczxczczx@gmail.com",
+      "password": "as",
+      "id": 16
+    },
+    {
+      "email": "zkxcjiz@gmail.com",
+      "password": "asas",
+      "id": 17
+    },
+    {
+      "email": "zxcnzxjkcnjk@gmail.com",
+      "password": "asas",
+      "id": 18
+    }
+  ]
+}
