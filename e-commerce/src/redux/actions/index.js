@@ -1,2 +1,2 @@
-import { loginAction, registerAction } from "./userActions";
-export { loginAction, registerAction };
+import { loginAction, registerAction, logoutAction } from "./userActions";
+export { loginAction, registerAction, logoutAction };

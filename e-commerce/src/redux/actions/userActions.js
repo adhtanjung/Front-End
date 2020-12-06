@@ -12,4 +12,10 @@ const registerAction = (data) => {
 	};
 };
 
-export { loginAction, registerAction };
+const logoutAction = () => {
+	return {
+		type: "LOGOUT",
+	};
+};
+
+export { loginAction, registerAction, logoutAction };

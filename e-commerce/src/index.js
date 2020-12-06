@@ -8,6 +8,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "react-redux";
 import reducer from "./redux/reducer";
+// import "@fortawesome/fontawesome-free/css/all.min.css";
+// import "bootstrap-css-only/css/bootstrap.min.css";
+// import "mdbreact/dist/css/mdb.css";
 
 const store = configureStore({
 	devTools: true,
