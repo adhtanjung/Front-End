@@ -9,9 +9,14 @@ import {
 	Nav,
 	NavItem,
 	NavLink,
+	UncontrolledDropdown,
+	DropdownToggle,
+	DropdownMenu,
+	DropdownItem,
 } from "reactstrap";
 import "./navbar.css";
 import { logoutAction } from "../redux/actions";
+import logo from "./logo_transparent.png";
 
 class NavigationBar extends Component {
 	state = {
@@ -22,7 +27,10 @@ class NavigationBar extends Component {
 			isOpen: !this.state.isOpen,
 		});
 	};
-
+	logoutBtn = () => {
+		this.props.logoutAction();
+		localStorage.removeItem("id");
+	};
 	render() {
 		return (
 			<div>
@@ -33,13 +41,15 @@ class NavigationBar extends Component {
 					className="shadow-sm p-3 mb-5 bg-white rounded"
 				>
 					<Link to="/">
-						<NavbarBrand>yudhostore</NavbarBrand>
+						<NavbarBrand>
+							<img src={logo} alt="" width="80px" />
+						</NavbarBrand>
 					</Link>
 					<NavbarToggler onClick={this.toggle} />
 					<Collapse isOpen={this.state.isOpen} navbar>
 						<Nav className="mr-auto" navbar>
 							<NavItem>
-								<Link to="/product">
+								<Link to="/products">
 									<NavLink>Products</NavLink>
 								</Link>
 							</NavItem>
@@ -63,14 +73,28 @@ class NavigationBar extends Component {
 							</NavItem>
 						</Nav>
 					) : (
-						<Link to="/" style={{ textDecoration: "none" }}>
-							<NavLink
-								className="clickable-link mr-3  px-3 py-2"
-								onClick={this.props.logoutAction}
-							>
-								Logout
-							</NavLink>
-						</Link>
+						<Nav>
+							<UncontrolledDropdown nav inNavbar>
+								<DropdownToggle nav caret style={{ color: "black" }}>
+									{this.props.userEmail}
+								</DropdownToggle>
+								<DropdownMenu right>
+									<DropdownItem>My Account</DropdownItem>
+
+									<DropdownItem>Settings</DropdownItem>
+									<DropdownItem divider />
+									<DropdownItem>Reset</DropdownItem>
+								</DropdownMenu>
+							</UncontrolledDropdown>
+							<Link to="/" style={{ textDecoration: "none" }}>
+								<NavLink
+									className="clickable-link mr-3  px-3 py-2"
+									onClick={this.logoutBtn}
+								>
+									Logout
+								</NavLink>
+							</Link>
+						</Nav>
 					)}
 				</Navbar>
 			</div>

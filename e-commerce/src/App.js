@@ -3,9 +3,21 @@ import { Route } from "react-router-dom";
 import { NavBar } from "./components/";
 import { Landing, LoginPage, ProfilePage, ProductsPage } from "./Pages";
 import RegisterPage from "./Pages/RegisterPage";
+import { keepLogin } from "./redux/actions";
+import { connect } from "react-redux";
+import ProductDetail from "./Pages/ProductDetail";
 
 class App extends Component {
 	state = {};
+	componentDidMount() {
+		const id = localStorage.getItem("id");
+		if (id) {
+			this.props.keepLogin(id);
+		} else {
+			localStorage.clear();
+		}
+	}
+
 	render() {
 		return (
 			<div>
@@ -14,10 +26,11 @@ class App extends Component {
 				<Route path="/login" component={LoginPage} />
 				<Route path="/register" component={RegisterPage} />
 				<Route path="/profile" component={ProfilePage} />
-				<Route path="/product" component={ProductsPage} />
+				<Route path="/products" component={ProductsPage} />
+				<Route path="/product-detail" component={ProductDetail} />
 			</div>
 		);
 	}
 }
-
-export default App;
+// const mapStatetoProps = () => {};
+export default connect(null, { keepLogin })(App);
