@@ -3,7 +3,6 @@ const INITIAL_STATE = {
 	productlist: [],
 	productById: {},
 	loading: false,
-	productCategory: [],
 };
 export const productReducer = (state = INITIAL_STATE, action) => {
 	switch (action.type) {
@@ -21,12 +20,6 @@ export const productReducer = (state = INITIAL_STATE, action) => {
 			return {
 				...state,
 				productById: action.payload,
-			};
-		case "FETCH_BY_CATEGORY":
-			return {
-				...state,
-				// productCategory: action.payload,
-				productlist: action.payload,
 			};
 		default:
 			return state;

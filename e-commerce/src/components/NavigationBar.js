@@ -17,7 +17,7 @@ import {
 import "./navbar.css";
 import { logoutAction } from "../redux/actions";
 import logo from "./logo_transparent.png";
-
+import cart from "./order.png";
 class NavigationBar extends Component {
 	state = {
 		isOpen: false,
@@ -74,6 +74,9 @@ class NavigationBar extends Component {
 						</Nav>
 					) : (
 						<Nav>
+							<Link>
+								<img src={cart} alt="" height="40px" />
+							</Link>
 							<UncontrolledDropdown nav inNavbar>
 								<DropdownToggle nav caret style={{ color: "black" }}>
 									{this.props.userEmail}

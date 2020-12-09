@@ -8,8 +8,6 @@ import {
 import Select from "react-select";
 import { ProductCards } from "../components";
 import { Link } from "react-router-dom";
-import Axios from "axios";
-import { fakeUrl } from "../helpers/fake-api-url";
 
 class ProductsPage extends Component {
 	state = { selectedCategory: 0 };
@@ -20,8 +18,6 @@ class ProductsPage extends Component {
 	}
 	componentDidUpdate(prevProps, prevState) {
 		if (prevState.selectedCategory !== this.state.selectedCategory) {
-			// Axios.get(`${fakeUrl}/categories?category=`)
-			// console.log(this.state);
 			const id = this.state.selectedCategory;
 			this.props.fetchProductByCategoryAction(id);
 			console.log(this.props.filteredProduct);
@@ -57,7 +53,7 @@ class ProductsPage extends Component {
 					</div>
 					<div>{this.renderCategoryList()}</div>
 				</div>
-				<div className="d-flex justify-content-center mt-5">
+				<div className="d-flex justify-content-center mt-5 flex-wrap">
 					{this.renderProducts()}
 				</div>
 			</div>
@@ -68,7 +64,6 @@ const mapStatetoProps = (state) => {
 	return {
 		categories: state.product.categories,
 		productlist: state.product.productlist,
-		// filteredProduct: state.product.productCategory,
 	};
 };
 

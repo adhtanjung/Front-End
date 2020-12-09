@@ -39,7 +39,7 @@ export const fetchProductByIdAction = (id) => {
 					payload: res.data,
 				});
 			})
-			.then((err) => {
+			.catch((err) => {
 				console.log(err);
 			});
 	};
@@ -51,7 +51,7 @@ export const fetchProductByCategoryAction = (id) => {
 			Axios.get(`${fakeUrl}/products`)
 				.then((res) => {
 					dispatch({
-						type: "FETCH_BY_CATEGORY",
+						type: "FETCH_PRODUCTS",
 						payload: res.data,
 					});
 				})
@@ -62,7 +62,7 @@ export const fetchProductByCategoryAction = (id) => {
 			Axios.get(`${fakeUrl}/products?categoryID=${id}`)
 				.then((res) => {
 					dispatch({
-						type: "FETCH_BY_CATEGORY",
+						type: "FETCH_PRODUCTS",
 						payload: res.data,
 					});
 				})
