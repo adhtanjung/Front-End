@@ -74,7 +74,7 @@ class NavigationBar extends Component {
 						</Nav>
 					) : (
 						<Nav>
-							<Link>
+							<Link to="/cart">
 								<img src={cart} alt="" height="40px" />
 							</Link>
 							<UncontrolledDropdown nav inNavbar>

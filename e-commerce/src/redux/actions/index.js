@@ -10,6 +10,14 @@ import {
 	fetchProductByIdAction,
 	fetchProductByCategoryAction,
 } from "./productActions";
+
+import {
+	addToCartAction,
+	checkOutAction,
+	deleteCartAction,
+	editCartAction,
+	getCartActionById,
+} from "./cartActions";
 export {
 	loginAction,
 	registerAction,
@@ -19,4 +27,9 @@ export {
 	fetchProductsAction,
 	fetchProductByIdAction,
 	fetchProductByCategoryAction,
+	addToCartAction,
+	checkOutAction,
+	deleteCartAction,
+	editCartAction,
+	getCartActionById,
 };

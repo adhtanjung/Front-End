@@ -1,7 +1,13 @@
 import React, { Component } from "react";
 import { Route } from "react-router-dom";
 import { NavBar } from "./components/";
-import { Landing, LoginPage, ProfilePage, ProductsPage } from "./Pages";
+import {
+	Landing,
+	LoginPage,
+	ProfilePage,
+	ProductsPage,
+	CartPage,
+} from "./Pages";
 import RegisterPage from "./Pages/RegisterPage";
 import { keepLogin } from "./redux/actions";
 import { connect } from "react-redux";
@@ -28,6 +34,7 @@ class App extends Component {
 				<Route path="/profile" component={ProfilePage} />
 				<Route path="/products" component={ProductsPage} />
 				<Route path="/product-detail" component={ProductDetail} />
+				<Route path="/cart" component={CartPage} />
 			</div>
 		);
 	}

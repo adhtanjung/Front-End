@@ -1,11 +1,11 @@
 import React, { Component } from "react";
 import queryString from "querystring";
 import { connect } from "react-redux";
-import { fetchProductByIdAction } from "../redux/actions";
+import { fetchProductByIdAction, addToCartAction } from "../redux/actions";
 import { Button } from "reactstrap";
 
 class ProductDetail extends Component {
-	state = { qty: 0 };
+	state = { qty: 1 };
 	componentDidMount() {
 		const id = queryString.parse(this.props.location.search)["?id"];
 		const { fetchProductByIdAction } = this.props;
@@ -34,6 +34,22 @@ class ProductDetail extends Component {
 				qty: this.state.qty - 1,
 			});
 		}
+	};
+
+	addToCart = () => {
+		const { productID, userID, addToCartAction } = this.props;
+		const { qty } = this.state;
+		const { name, price, image } = productID;
+		const dataCart = {
+			name,
+			qty: qty,
+			price,
+			userID,
+			image,
+		};
+		// tidak ada = addtocartaction
+		// ada = editcartaction
+		addToCartAction(dataCart);
 	};
 	render() {
 		const { name, image, price, stock } = this.props.productID;
@@ -70,6 +86,7 @@ class ProductDetail extends Component {
 						<Button
 							onClick={this.addBtn}
 							style={{ backgroundColor: "#561c99" }}
+							disabled={this.state.qty === stock}
 						>
 							+
 						</Button>{" "}
@@ -77,6 +94,7 @@ class ProductDetail extends Component {
 						<Button
 							onClick={this.subBtn}
 							style={{ backgroundColor: "#561c99" }}
+							disabled={this.state.qty === 1}
 						>
 							-
 						</Button>
@@ -84,7 +102,12 @@ class ProductDetail extends Component {
 					<div className="mt-3">
 						<Button style={{ backgroundColor: "#561c99" }}>Buy now!</Button>
 						<span className="mx-2">Or</span>
-						<Button style={{ backgroundColor: "#561c99" }}>Add to Cart</Button>
+						<Button
+							style={{ backgroundColor: "#561c99" }}
+							onClick={this.addToCart}
+						>
+							Add to Cart
+						</Button>
 					</div>
 				</div>
 			</div>
@@ -94,8 +117,10 @@ class ProductDetail extends Component {
 const mapStatetoProps = (state) => {
 	return {
 		productID: state.product.productById,
+		userID: state.user.id,
 	};
 };
-export default connect(mapStatetoProps, { fetchProductByIdAction })(
-	ProductDetail
-);
+export default connect(mapStatetoProps, {
+	fetchProductByIdAction,
+	addToCartAction,
+})(ProductDetail);
