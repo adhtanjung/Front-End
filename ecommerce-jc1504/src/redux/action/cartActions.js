@@ -1,6 +1,6 @@
 import Axios from "axios";
-import { api_url } from "../../helpers/api_url";
 import swal from "sweetalert";
+import { api_url } from "../../helpers/api_url";
 
 export const addToCartAction = (data) => {
 	return (dispatch) => {
