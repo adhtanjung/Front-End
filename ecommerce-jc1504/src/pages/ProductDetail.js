@@ -10,8 +10,6 @@ import {
 } from "../redux/action";
 import { Button } from "reactstrap";
 import Fade from "react-reveal/Fade";
-import Axios from "axios";
-import { api_url } from "../helpers/api_url";
 
 class ProductDetail extends Component {
 	state = {
@@ -25,16 +23,30 @@ class ProductDetail extends Component {
 		// console.log(this.props.location.search.split("="));
 		// const productID = this.props.location.search.split("=")[1];
 		const productID = queryString.parse(this.props.location.search)["?id"];
-		console.log(productID);
+		// console.log(productID);
 		fetchProductByIdAction(productID);
 		getCartByIdAction(userID);
-		// Axios.get(`${api_url}/cart/${}`)
 	}
 
 	increaseQty = () => {
-		this.setState({
-			qtySelected: this.state.qtySelected + 1,
+		const { qtySelected } = this.state;
+		const { cartList, productById } = this.props;
+		let res = cartList.find((val) => {
+			return productById.name === val.name;
 		});
+		if (res) {
+			if (qtySelected + res.qty < productById.stock) {
+				this.setState({
+					qtySelected: this.state.qtySelected + 1,
+				});
+			} else {
+				alert("im so sorry you've reached the max amount of stock");
+			}
+		} else if (qtySelected < productById.stock) {
+			this.setState({
+				qtySelected: this.state.qtySelected + 1,
+			});
+		}
 	};
 
 	decreaseQty = () => {
@@ -42,18 +54,9 @@ class ProductDetail extends Component {
 			qtySelected: this.state.qtySelected - 1,
 		});
 	};
-	addQty = (id, qty) => {
-		const { increaseQtyAction, getCartByIdAction, userID } = this.props;
-		increaseQtyAction(id, qty, userID);
-		// const { product } = this.props;
-	};
-	subQty = (id, qty) => {
-		const { decreaseQtyAction, userID } = this.props;
-		decreaseQtyAction(id, qty, userID);
-	};
 
 	addToCart = () => {
-		const { productById, userID, addToCartAction } = this.props;
+		const { productById, userID, addToCartAction, cartList } = this.props;
 		const { qtySelected } = this.state;
 		const { name, price, image } = productById;
 		const dataCart = {
@@ -65,52 +68,23 @@ class ProductDetail extends Component {
 		};
 		// tidak ada = addtocartaction
 		// ada = editcartaction
-		addToCartAction(dataCart);
+		let res = cartList.find((val) => {
+			return productById.name === val.name;
+		});
+		if (res) {
+			if (productById.stock < qtySelected + res.qty) {
+				alert("im so sorry we cant proceed your request");
+			} else {
+				addToCartAction(dataCart);
+			}
+		} else {
+			addToCartAction(dataCart);
+		}
 	};
-	// renderButtons = () => {
-	// 	const { name, price, stock, image, id } = this.props.productById;
-	// 	const { cartList } = this.props;
-	// 	// let res = cartList.find((val) => {
-	// 	// 	return val.name === name;
-	// 	// });
-	// 	return (
-	// 		<div>
-	// 			<div>
-	// 				<Button
-	// 					onClick={() => this.subQty(id, res.qty)}
-	// 					style={{ backgroundColor: "#561c99" }}
-	// 					disabled={this.state.qtySelected === 1}
-	// 				>
-	// 					-
-	// 				</Button>
-	// 				{this.state.qtySelected}
-	// 				<Button
-	// 					onClick={() => this.addQty(id, res.qty)}
-	// 					style={{ backgroundColor: "#561c99" }}
-	// 					// disabled={stock === res.qty}
-	// 				>
-	// 					+
-	// 				</Button>
-	// 			</div>
-	// 			<div className="mt-3">
-	// 				<Button
-	// 					style={{ backgroundColor: "#561c99" }}
-	// 					onClick={this.addToCart}
-	// 					// disabled={}
-	// 				>
-	// 					Add to Cart
-	// 				</Button>
-	// 			</div>
-	// 		</div>
-	// 	);
-	// };
+
 	render() {
-		const { name, price, stock, image, id } = this.props.productById;
-		// const { cartList } = this.props;
-		// let res = cartList.find((val) => {
-		// 	return val.name === name;
-		// });
-		// console.log(res);
+		const { name, price, stock, image } = this.props.productById;
+
 		return (
 			<div className="d-flex container-fluid align-items-center">
 				<div
@@ -145,7 +119,7 @@ class ProductDetail extends Component {
 						</div>
 						<div>
 							<Button
-								onClick={() => this.subQty(id)}
+								onClick={() => this.decreaseQty()}
 								style={{ backgroundColor: "#561c99" }}
 								disabled={this.state.qtySelected === 1}
 							>
@@ -153,7 +127,7 @@ class ProductDetail extends Component {
 							</Button>
 							{this.state.qtySelected}
 							<Button
-								onClick={() => this.addQty(id)}
+								onClick={() => this.increaseQty()}
 								style={{ backgroundColor: "#561c99" }}
 								// disabled={stock === res.qty}
 							>
@@ -164,7 +138,7 @@ class ProductDetail extends Component {
 							<Button
 								style={{ backgroundColor: "#561c99" }}
 								onClick={this.addToCart}
-								// disabled={}
+								// disabled={cartList[0].qty === stock}
 							>
 								Add to Cart
 							</Button>

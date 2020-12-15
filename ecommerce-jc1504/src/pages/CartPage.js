@@ -45,7 +45,7 @@ class CartPage extends Component {
 	};
 
 	checkOut = () => {
-		const { cartList, userID, checkOutAction } = this.props;
+		const { cartList, userID, checkOutAction, product } = this.props;
 		const date = new Date();
 		let day = date.getDate();
 		let month = date.getMonth() + 1;
@@ -57,8 +57,9 @@ class CartPage extends Component {
 			items: cartList,
 			userID: userID,
 		};
-		checkOutAction(checkOutData);
+		checkOutAction(checkOutData, cartList, product);
 		this.setState({ redirectHome: true });
+		// console.log(cartList, product);
 	};
 
 	addQty = (id, qty) => {
@@ -72,7 +73,7 @@ class CartPage extends Component {
 	};
 	renderTableBody = () => {
 		const { product } = this.props;
-		console.log(product);
+		// console.log(product);
 		// Axios.get(`${api_url}/products`)
 		// 	.then((res) => {
 		// 		this.setState({ products: res.data });

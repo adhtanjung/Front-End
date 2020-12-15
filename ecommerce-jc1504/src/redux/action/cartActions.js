@@ -76,8 +76,24 @@ export const deleteCartAction = (id, userID) => {
 	};
 };
 
-export const checkOutAction = (data) => {
+export const checkOutAction = (data, cartList, product) => {
 	return (dispatch) => {
+		cartList.forEach((value) => {
+			Axios.get(`${api_url}/products?name=${value.name}`)
+				.then((res) => {
+					let result = product.find((val) => {
+						return value.name === val.name;
+					});
+					console.log(result);
+
+					Axios.patch(`${api_url}/products/${result.id}`, {
+						stock: result.stock - value.qty,
+					})
+						.then((res) => {})
+						.catch((err) => {});
+				})
+				.catch((err) => {});
+		});
 		Axios.post(`${api_url}/transaction`, data)
 			.then((res) => {
 				console.log("masuk");
