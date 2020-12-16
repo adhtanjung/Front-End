@@ -8,14 +8,11 @@ import {
 	DropdownToggle,
 	Nav,
 	Navbar,
-	NavbarBrand,
-	NavbarText,
 	NavbarToggler,
 	NavItem,
-	NavLink,
 	UncontrolledDropdown,
 } from "reactstrap";
-import { logoutAction } from "../redux/action";
+import { logoutAction, getCartByIdAction } from "../redux/action";
 import "./navbar.css";
 import logo from "./logo_transparent.png";
 import cart from "./order.png";
@@ -29,37 +26,42 @@ class NavigationBar extends Component {
 			isOpen: !this.state.isOpen,
 		});
 	};
-
-	renderDropdown = () => {
-		if (this.props.email !== "") {
-			return (
-				<DropdownMenu right>
-					<Link to="/">
-						<DropdownItem>Profile</DropdownItem>
-					</Link>
-					<Link to="/cart">
-						<DropdownItem>Cart</DropdownItem>
-					</Link>
-					<Link to="/">
-						<DropdownItem onClick={this.props.logoutAction}>
-							Log Out
-						</DropdownItem>
-					</Link>
-				</DropdownMenu>
-			);
-		} else {
-			return (
-				<DropdownMenu right>
-					<Link to="/login">
-						<DropdownItem>Login</DropdownItem>
-					</Link>
-					<Link to="/register">
-						<DropdownItem>Register</DropdownItem>
-					</Link>
-				</DropdownMenu>
-			);
+	componentDidUpdate(prevProps, prevState) {
+		const { getCartByIdAction, cart, userID } = this.props;
+		if (prevProps.cart !== cart) {
+			getCartByIdAction(userID);
 		}
-	};
+	}
+	// renderDropdown = () => {
+	// 	if (this.props.email !== "") {
+	// 		return (
+	// 			<DropdownMenu right>
+	// 				<Link to="/">
+	// 					<DropdownItem>Profile</DropdownItem>
+	// 				</Link>
+	// 				<Link to="/cart">
+	// 					<DropdownItem>Cart</DropdownItem>
+	// 				</Link>
+	// 				<Link to="/">
+	// 					<DropdownItem onClick={this.props.logoutAction}>
+	// 						Log Out
+	// 					</DropdownItem>
+	// 				</Link>
+	// 			</DropdownMenu>
+	// 		);
+	// 	} else {
+	// 		return (
+	// 			<DropdownMenu right>
+	// 				<Link to="/login">
+	// 					<DropdownItem>Login</DropdownItem>
+	// 				</Link>
+	// 				<Link to="/register">
+	// 					<DropdownItem>Register</DropdownItem>
+	// 				</Link>
+	// 			</DropdownMenu>
+	// 		);
+	// 	}
+	// };
 	render() {
 		return (
 			<div>
@@ -109,8 +111,9 @@ class NavigationBar extends Component {
 						</Nav>
 					) : (
 						<Nav>
-							<Link to="/cart">
+							<Link to="/cart" class="notification">
 								<img src={cart} alt="" height="40px" />
+								<span class="badge">{this.props.cart.length}</span>
 							</Link>
 							<UncontrolledDropdown nav inNavbar>
 								<DropdownToggle nav caret style={{ color: "black" }}>
@@ -147,10 +150,14 @@ class NavigationBar extends Component {
 	}
 }
 
-const mapStatetoProps = ({ user }) => {
+const mapStatetoProps = ({ user, cart }) => {
 	return {
 		email: user.email,
+		cart: cart.cart,
+		userID: user.id,
 	};
 };
 
-export default connect(mapStatetoProps, { logoutAction })(NavigationBar);
+export default connect(mapStatetoProps, { logoutAction, getCartByIdAction })(
+	NavigationBar
+);

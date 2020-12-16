@@ -3,6 +3,7 @@ import React, { Component } from "react";
 import { connect } from "react-redux";
 import { Route } from "react-router-dom";
 import { NavigationBar } from "./components";
+// import moduleName from './pages';
 
 // import { api_url } from "./helpers/api_url";
 import {

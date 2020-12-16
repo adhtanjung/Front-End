@@ -4,7 +4,7 @@ import { Button, Input } from "reactstrap";
 import { api_url } from "../helpers/api_url";
 import { connect } from "react-redux";
 import { loginAction } from "../redux/action";
-import { Link, Redirect } from "react-router-dom";
+import { Redirect } from "react-router-dom";
 import "./registerpage.css";
 import bg from "./bg.png";
 

@@ -9,5 +9,11 @@
 
 let array = { qty: 0 };
 
-array.qty =  ...(array.qty + 3) ;
-console.log(array);
+// array.qty =  ...(array.qty + 3) ;
+// console.log(array);
+
+let arr = [];
+
+if (arr !== []) {
+	console.log("masuk");
+}

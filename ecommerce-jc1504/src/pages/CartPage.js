@@ -11,8 +11,7 @@ import {
 import { Button } from "reactstrap";
 import Fade from "react-reveal/Fade";
 import { Redirect } from "react-router-dom";
-import Axios from "axios";
-import { api_url } from "../helpers/api_url";
+import { Spinner } from "reactstrap";
 
 class CartPage extends Component {
 	state = { redirectHome: false, products: [] };
@@ -24,9 +23,12 @@ class CartPage extends Component {
 	}
 
 	componentDidUpdate(prevProps) {
-		const { userID, getCartByIdAction } = this.props;
+		const { userID, getCartByIdAction, product } = this.props;
 		if (prevProps.userID !== userID) {
 			getCartByIdAction(userID);
+		}
+		if (prevProps.product !== product) {
+			fetchProductsAction();
 		}
 	}
 
@@ -63,7 +65,7 @@ class CartPage extends Component {
 	};
 
 	addQty = (id, qty) => {
-		const { increaseQtyAction, getCartByIdAction, userID } = this.props;
+		const { increaseQtyAction, userID } = this.props;
 		increaseQtyAction(id, qty, userID);
 		// const { product } = this.props;
 	};
@@ -73,13 +75,16 @@ class CartPage extends Component {
 	};
 	renderTableBody = () => {
 		const { product } = this.props;
-		// console.log(product);
-		// Axios.get(`${api_url}/products`)
-		// 	.then((res) => {
-		// 		this.setState({ products: res.data });
-		// 	})
-		// 	.catch((err) => {});
-		// const { products } = this.state;
+		// if (product === []) {
+		// 	return (
+		// 		<div>
+		// 			<Spinner color="primary" />
+		// 			<Spinner color="secondary" />
+		// 			<Spinner color="success" />
+		// 			<Spinner color="danger" />
+		// 		</div>
+		// 	);
+		// } else {
 		let newArr = this.props.cartList.map((val, i) => {
 			let total = val.price * val.qty;
 			let idProduct = product.find((value) => {
@@ -93,13 +98,7 @@ class CartPage extends Component {
 						style={{ borderBottom: "1px solid grey" }}
 					>
 						<div style={{ width: "30%" }}>
-							<img
-								src={val.image}
-								alt="img not found"
-								height="250px"
-								// width="250px"
-								// style={{ objectFit: "contain" }}
-							/>
+							<img src={val.image} alt="img not found" height="250px" />
 						</div>
 						<div
 							className="d-flex justify-content-between"
@@ -147,8 +146,10 @@ class CartPage extends Component {
 			);
 		});
 		return newArr;
+		// }
 	};
 	render() {
+		const { product } = this.props;
 		if (this.state.redirectHome) {
 			return <Redirect to="/" />;
 		} else if (this.props.cartList.length === 0) {
@@ -168,7 +169,15 @@ class CartPage extends Component {
 					</h1>
 				</div>
 
-				<div className="border-top border-dark">{this.renderTableBody()}</div>
+				<div className="border-top border-dark">
+					{product.length !== 0 ? (
+						this.renderTableBody()
+					) : (
+						<div>
+							<Spinner color="primary" />
+						</div>
+					)}
+				</div>
 				<div className="d-flex flex-column justify-content-center align-items-end">
 					<h1 style={{ fontWeight: "600" }}>
 						Your cart total is Rp. {this.renderGrandTotal().toLocaleString()}
